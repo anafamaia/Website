@@ -1,0 +1,14 @@
+body {
+  background: url("") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.clickable-zone {
+  position: absolute;
+  top: 20%; /* Ajustar conforme a posição */
+  left: 50%;
+  width: 100px; /* Ajustar o tamanho */
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparente ou invisível */
+  cursor: pointer;
+}
