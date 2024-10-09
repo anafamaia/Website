@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ana's Town</title>
+    <meta
+      name="description"
+      content="(Descrição do meu website com palavras chave)"
+    />
+    <title>Welcome to Filipa's Town</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -15,17 +19,58 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="" alt="logotipo" />
+      <div id="logo">
+        <img id="img-logo" src="images/logo.png" alt="logotipo" />
       </div>
     </header>
     <main>
-      <div class="clickable-zone" onclick="openWindow()"></div>
+      <img
+        src="images/Background.webp"
+        usemap="#imagem-clicavel"
+        alt="Casas clicáveis"
+      />
+      <map name="imagem-clicavel">
+        <area
+          shape="rect"
+          coords="546,561,287,563,285,292,512,292,548,375"
+          href="javascript:void(0);"
+          onclick="openModal('modal1')"
+          alt="Casa 1"
+        />
+        <area
+          shape="rect"
+          coords="1119,946,807,946,807,799,897,676,1063,678,1063,738,1119,788"
+          href="javascript:void(0);"
+          onclick="openModal('modal2')"
+          alt="Casa 2"
+        />
+        <area
+          shape="rect"
+          coords="1543,590,1318,592,1316,471,1357,341,1487,341,1543,470"
+          href="javascript:void(0);"
+          onclick="openModal('modal3')"
+          alt="Casa 3"
+        />
+      </map>
 
-      <div id="myModal" class="modal">
+      <div id="modal1" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Conteúdo da janela pop-up!</p>
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <p>Esta é a Casa 1!</p>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <p>Esta é a Casa 2!</p>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal3')">&times;</span>
+          <p>Esta é a Casa 3!</p>
         </div>
       </div>
     </main>

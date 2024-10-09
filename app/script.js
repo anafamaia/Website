@@ -1,14 +1,16 @@
-function openWindow() {
-  document.getElementById("myModal").style.display = "block";
+// Função para abrir o modal
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
 }
 
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function () {
-  document.getElementById("myModal").style.display = "none";
-};
+// Função para fechar o modal
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
 
+// Fecha o modal se o utilizador clicar fora do conteúdo
 window.onclick = function (event) {
-  if (event.target == document.getElementById("myModal")) {
-    document.getElementById("myModal").style.display = "none";
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
   }
 };

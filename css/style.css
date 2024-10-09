@@ -1,14 +1,50 @@
 body {
-  background: url("") no-repeat center center fixed;
+  background-image: url("../images/Background.webp");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
-.clickable-zone {
-  position: absolute;
-  top: 20%; /* Ajustar conforme a posição */
-  left: 50%;
-  width: 100px; /* Ajustar o tamanho */
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.1); /* Transparente ou invisível */
+#logo {
+}
+
+#img-logo {
+  width: 80px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
 }
