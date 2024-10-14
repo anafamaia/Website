@@ -21,61 +21,65 @@
     <main>
       <div id="logo">
         <img id="img-logo" src="images/logo.png" alt="logotipo" />
-      </div>
-      <img
-        src="images/Background.webp"
-        usemap="#imagem-clicavel"
-        alt="Casas clicáveis"
-        id="img-background"
-      />
-      <map name="imagem-clicavel">
-        <area
-          shape="rect"
-          coords="546,561,287,563,285,292,512,292,548,375"
-          href="javascript:void(0);"
-          onclick="openModal('modal1')"
-          alt="Casa 1"
-        />
-        <area
-          shape="rect"
-          coords="1119,946,807,946,807,799,897,676,1063,678,1063,738,1119,788"
-          href="javascript:void(0);"
-          onclick="openModal('modal2')"
-          alt="Casa 2"
-        />
-        <area
-          shape="rect"
-          coords="1543,590,1318,592,1316,471,1357,341,1487,341,1543,470"
-          href="javascript:void(0);"
-          onclick="openModal('modal3')"
-          alt="Casa 3"
-        />
-      </map>
 
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal1')">&times;</span>
-          <p>Esta é a Casa 1!</p>
+        <img
+          src="images/Background.webp"
+          usemap="#imagem-clicavel"
+          alt="Casas clicáveis"
+          id="img-background"
+        />
+        <map name="imagem-clicavel">
+          <area
+            shape="rect"
+            coords="546,561,287,563,285,292,512,292,548,375"
+            href="javascript:void(0);"
+            alt="Casa 1"
+            id="modalOne"
+            style="background-color: red; width: 200px"
+          />
+          <area
+            shape="rect"
+            coords="1119,946,807,946,807,799,897,676,1063,678,1063,738,1119,788"
+            href="javascript:void(0);"
+            onclick="openModal('modal2')"
+            alt="Casa 2"
+            id="modalTwo"
+          />
+          <area
+            shape="rect"
+            coords="1543,590,1318,592,1316,471,1357,341,1487,341,1543,470"
+            href="javascript:void(0);"
+            onclick="openModal('modal3')"
+            alt="Casa 3"
+            id="modalThree"
+          />
+        </map>
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <p>Esta é a Casa 1!</p>
+          </div>
         </div>
-      </div>
 
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal2')">&times;</span>
-          <p>Esta é a Casa 2!</p>
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <p>Esta é a Casa 2!</p>
+          </div>
         </div>
-      </div>
 
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal3')">&times;</span>
-          <p>Esta é a Casa 3!</p>
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <p>Esta é a Casa 3!</p>
+          </div>
         </div>
       </div>
     </main>
     <footer>
-      <div>
-        <p></p>
+      <div class="d-flex justify-content-center align-items-center">
+        <p id="footer">Website designed and created by Ana Filipa Maia</p>
       </div>
     </footer>
     <script

@@ -1,4 +1,12 @@
-#logo {
+html {
+  background-color: #f6f1ec;
+}
+
+#img-logo {
+  width: 80px;
+  position: absolute;
+  top: 1.5%;
+  left: 50%;
 }
 
 #img-background {
@@ -37,4 +45,18 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+footer {
+  min-height: 30px;
+  background-color: #132fba;
+}
+
+#footer {
+  color: #f6f1ec;
+  font-size: 12px;
+}
+
+#linkFooter {
+  color: #f6f1ec;
 }

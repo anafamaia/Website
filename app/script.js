@@ -1,5 +1,8 @@
+alert("olá");
+
 // Função para abrir o modal
-function openModal(modalId) {
+function openModal() {
+  console.log("cucu");
   document.getElementById(modalId).style.display = "block";
 }
 
@@ -14,3 +17,6 @@ window.onclick = function (event) {
     event.target.style.display = "none";
   }
 };
+
+let modal1 = document.querySelector("#modal1");
+modal1.addEventListener("click", openModal);
