@@ -1,5 +1,6 @@
 html {
   background-color: #f6f1ec;
+  font-family: Roboto;
 }
 
 #img-logo {
@@ -48,13 +49,14 @@ html {
 }
 
 footer {
-  min-height: 30px;
   background-color: #132fba;
 }
 
 #footer {
+  padding: 15px;
   color: #f6f1ec;
   font-size: 12px;
+  margin: 0;
 }
 
 #linkFooter {
