@@ -101,3 +101,15 @@ illustration.addEventListener("mouseenter", function () {
 illustration.addEventListener("mouseleave", function () {
   illustration.src = "images/SVG/illustration.svg";
 });
+
+//mudar cor do botão download cv
+
+const downloadCv = document.querySelector(".img-download");
+
+downloadCv.addEventListener("mouseenter", function () {
+  downloadCv.src = "images/SVG/downloadcv-ver.svg";
+});
+
+downloadCv.addEventListener("mouseleave", function () {
+  downloadCv.src = "images/SVG/downloadcv.svg";
+});
