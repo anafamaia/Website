@@ -48,9 +48,41 @@ modalCurious.addEventListener("click", openModalCurious);
 let closeBtn3 = document.querySelector("#modal-curious .btn-close");
 modalCurious.addEventListener("click", closeModalCurious);
 
+//modal Filipa's Town
+function openModalFilipasTown(modalFilipasTown) {
+  document.getElementById("modal-filipas-town").style.display = "block";
+}
+
+function closeModalFilipasTown(modalFilipasTown) {
+  document.getElementById("modal-filipas-town").style.display = "none";
+  document.getElementById("modal-projects").style.display = "block";
+}
+
+let modalFilipasTown = document.querySelector("#modal-filipas-town");
+modalFilipasTown.addEventListener("click", openModalFilipasTown);
+
+let closeBtn4 = document.querySelector("#modal-filipas-town .btn-close");
+modalFilipasTown.addEventListener("click", closeModalFilipasTown);
+
+//modal Illustration
+function openModalIllustration(modalIllustration) {
+  document.getElementById("modal-illustration").style.display = "block";
+}
+
+function closeModalIllustration(modalIllustration) {
+  document.getElementById("modal-illustration").style.display = "none";
+  document.getElementById("modal-projects").style.display = "block";
+}
+
+let modalIllustration = document.querySelector("#modal-illustration");
+modalIllustration.addEventListener("click", openModalIllustration);
+
+let closeBtn5 = document.querySelector("#modal-illustration .btn-close");
+modalIllustration.addEventListener("click", closeModalIllustration);
+
 //mudar cor dos icons das redes sociais
 
-const linkedin = document.querySelector(".linkedin");
+let linkedin = document.querySelector(".linkedin");
 
 linkedin.addEventListener("mouseenter", function () {
   linkedin.src = "images/SVG/linkedin-ver.svg";
@@ -60,7 +92,7 @@ linkedin.addEventListener("mouseleave", function () {
   linkedin.src = "images/SVG/linkedin.svg";
 });
 
-const github = document.querySelector(".github");
+let github = document.querySelector(".github");
 
 github.addEventListener("mouseenter", function () {
   github.src = "images/SVG/github-ver.svg";
@@ -70,7 +102,7 @@ github.addEventListener("mouseleave", function () {
   github.src = "images/SVG/github.svg";
 });
 
-const behance = document.querySelector(".behance");
+let behance = document.querySelector(".behance");
 
 behance.addEventListener("mouseenter", function () {
   behance.src = "images/SVG/behance-ver.svg";
@@ -82,7 +114,7 @@ behance.addEventListener("mouseleave", function () {
 
 //mudar cor dos icons dos projetos
 
-const filipasTown = document.querySelector(".filipasTown");
+let filipasTown = document.querySelector(".filipasTown");
 
 filipasTown.addEventListener("mouseenter", function () {
   filipasTown.src = "images/SVG/filipastown-ver.svg";
@@ -92,7 +124,7 @@ filipasTown.addEventListener("mouseleave", function () {
   filipasTown.src = "images/SVG/filipastown.svg";
 });
 
-const illustration = document.querySelector(".illustration");
+let illustration = document.querySelector(".illustration");
 
 illustration.addEventListener("mouseenter", function () {
   illustration.src = "images/SVG/illustration-ver.svg";
@@ -104,7 +136,7 @@ illustration.addEventListener("mouseleave", function () {
 
 //mudar cor do botão download cv
 
-const downloadCv = document.querySelector(".img-download");
+let downloadCv = document.querySelector(".img-download");
 
 downloadCv.addEventListener("mouseenter", function () {
   downloadCv.src = "images/SVG/downloadcv-ver.svg";
@@ -113,3 +145,6 @@ downloadCv.addEventListener("mouseenter", function () {
 downloadCv.addEventListener("mouseleave", function () {
   downloadCv.src = "images/SVG/downloadcv.svg";
 });
+
+//atualizar data no footer
+document.getElementById("year").textContent = new Date().getFullYear();

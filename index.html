@@ -217,6 +217,7 @@
           </div>
         </div>
       </div>
+
       <div id="modal-projects" class="modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
@@ -233,7 +234,10 @@
               <div class="container text-center">
                 <div class="row align-items-center">
                   <div class="col-md-6">
-                    <a href="">
+                    <a
+                      href="javascript:void(0);"
+                      onclick="openModalFilipasTown('modal-filipas-town')"
+                    >
                       <img
                         src="images/SVG/filipastown.svg"
                         alt="Filipa's Town"
@@ -242,7 +246,10 @@
                     </a>
                   </div>
                   <div class="col-md-6">
-                    <a href="">
+                    <a
+                      href="javascript:void(0);"
+                      onclick="openModalIllustration('modal-illustration')"
+                    >
                       <img
                         src="images/SVG/illustration.svg"
                         alt="Illustration"
@@ -250,6 +257,154 @@
                       />
                     </a>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-filipas-town" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img
+                src="images/SVG/filipastown-ver.svg"
+                alt="Filipa's Town"
+                class="project-titles modal-title text-center w-100"
+              />
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col text-start">
+                    <h3 class="h3-projects">Project Overview</h3>
+                    <h4 class="h4-projects">Goal</h4>
+                    <p class="p-projects">
+                      Create a personal portfolio website to showcase my UX/UI
+                      design and front-end development skills.
+                    </p>
+                    <h4 class="h4-projects">Research & Planning</h4>
+                    <ul>
+                      <li>
+                        Analyzed portfolios for navigation and design
+                        inspiration.
+                      </li>
+                      <li>
+                        <b>Key focus:</b> Simple navigation and lots of
+                        creativity.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-end">
+                    <h3 class="h3-projects">Design Process</h3>
+                    <h4 class="h4-projects">Tools Used</h4>
+                    <ul>
+                      <li><b>Figma</b> for prototyping and wireframes.</li>
+                      <li>
+                        <b>Adobe Illustrator</b> for custom background, logo and
+                        icons design.
+                      </li>
+                    </ul>
+                    <p class="p-projects">
+                      The interactive background with clickable blue-roofed
+                      houses became the main navigation element, reflecting my
+                      love for creative and organized design.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-start">
+                    <h3 class="h3-projects">Development & Implementation</h3>
+                    <h4 class="h4-projects">Technologies</h4>
+                    <ul>
+                      <li>
+                        <b>HTML, CSS, Bootstrap and JavaScript</b> for
+                        responsive development.
+                      </li>
+                    </ul>
+                    <p class="p-projects">
+                      The mobile version adapted the background to ensure
+                      seamless user experience.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-end">
+                    <h3 class="h3-projects">Challenges & Solutions</h3>
+                    <ul>
+                      <li>
+                        <b>Mobile Adaptation:</b> <br />
+                        Solution: Optimized CSS/JavaScript for responsiveness.
+                      </li>
+                      <li>
+                        <b>Performance:</b> <br />
+                        Solution: Compressed assets to maintain fast loading
+                        times.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-start">
+                    <h3 class="h3-projects">Results</h3>
+                    <ul>
+                      <li><b>Interactive Design</b> praised for creativity.</li>
+                      <li>
+                        <b>Skills Developed:</b> Improved front-end and UX/UI
+                        design.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-illustration" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img
+                src="images/SVG/illustration-ver.svg"
+                alt="Illustration"
+                class="project-titles modal-title text-center w-100"
+              />
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col text-start"></div>
+                </div>
+                <div class="row">
+                  <div class="col text-end"></div>
+                </div>
+                <div class="row">
+                  <div class="col text-start"></div>
+                </div>
+                <div class="row">
+                  <div class="col text-end"></div>
+                </div>
+                <div class="row">
+                  <div class="col text-start"></div>
                 </div>
               </div>
             </div>
@@ -280,7 +435,7 @@
                         When I’m not designing digital experiences, I’m a
                         professional architect... of Legos! <br />
                         There's nothing like spending hours building (and
-                        sometimes un-building creative disasters) with these
+                        sometimes un-building creative disasters) with those
                         colorful pieces!
                       </p>
                     </div>
@@ -353,7 +508,10 @@
     </main>
     <footer>
       <div class="d-flex justify-content-center align-items-center">
-        <p id="footer">Website designed and created by Ana Filipa Maia</p>
+        <p id="footer">
+          © 2024 - <span id="year">Ano Atual</span> Ana Filipa Maia | Crafted
+          with creativity and code
+        </p>
       </div>
     </footer>
   </body>
