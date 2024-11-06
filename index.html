@@ -12,7 +12,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="app/script.js" defer></script>
+    <script src="app/resizer.js" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -22,19 +29,13 @@
   </head>
   <body>
     <main>
-      <div class="container text-center" id="nav-bar">
-        <div class="row align-items-center">
+      <div class="container d-flex flex-column text-center">
+        <div class="row">
           <div class="col">
-            <img
-              id="logo"
-              src="images/logo.png"
-              alt="logotipo"
-              class="img-fluid"
-            />
+            <img id="logo" src="images/SVG/logo.svg" alt="logotipo" />
           </div>
         </div>
       </div>
-
       <img
         src="images/bg-dt.webp"
         usemap="#imagemap-desktop"
@@ -51,34 +52,33 @@
         <area
           shape="poly"
           coords="285,561,287,303,293,293,514,292,548,375,550,561"
-          href="https://www.jn.pt"
-          target="_blank"
-          onclick="openModal('modal1')"
+          href="javascript:void(0);"
+          onclick="openModalAbout('modal-about')"
           alt="Casa 1"
           id="aboutMeDesktop"
         />
         <area
           shape="poly"
           coords="807,946,807,799,896,676,1063,678,1062,738,1119,790,1121,946"
-          href=""
-          onclick="openModal('modal2')"
+          href="javascript:void(0);"
+          onclick="openModalProjects('modal-projects')"
           alt="Casa 2"
           id="projectsDesktop"
         />
         <area
           shape="poly"
           coords="1318,592,1316,471,1360,341,1484,339,1543,471,1543,588"
-          href=""
-          onclick="openModal('modal3')"
+          href="javascript:void(0);"
+          onclick="openModalCurious('modal-curious')"
           alt="Casa 3"
           id="curiousDesktop"
         />
       </map>
-      <map name="imagemap-mobile">
+      <!-- <map name="imagemap-mobile">
         <area
           shape="poly"
           coords="411,1843,1104,1840,1104,1342,1017,1129,433,1129,411,1153"
-          href=""
+          href="javascript:void(0);"
           onclick="openModal('modal1')"
           alt="Casa 1"
           id="aboutMeMobile"
@@ -86,7 +86,7 @@
         <area
           shape="poly"
           coords="1905,3245,2627,3245,2627,2888,2497,2769,2497,2622,2111,2622,1905,2898"
-          href="https://google.com"
+          href="javascript:void(0);"
           onclick="openModal('modal2')"
           alt="Casa 2"
           id="projectsMobile"
@@ -94,28 +94,194 @@
         <area
           shape="poly"
           coords="433,4804,1104,4804,1104,4446,939,4051,557,4051,433,4446"
-          href=""
+          href="javascript:void(0);"
           onclick="openModal('modal3')"
           alt="Casa 3"
           id="curiousMobile"
         />
-      </map>
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal1')">&times;</span>
-          <p>Esta é a Casa 1</p>
+      </map> -->
+
+      <div id="modal-about" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-5 text-center">
+                    <img
+                      src="images/SVG/logo.svg"
+                      alt="logotipo"
+                      class="logo-about mx-auto"
+                    />
+                    <a
+                      href="https://www.linkedin.com/in/anafamaia"
+                      target="_blank"
+                      class="link-icons"
+                    >
+                      <img
+                        src="images/SVG/linkedin.svg"
+                        alt="Linkedin"
+                        class="linkedin mt-4"
+                      />
+                    </a>
+                    <a
+                      href="https://github.com/anafamaia"
+                      target="_blank"
+                      class="link-icons"
+                    >
+                      <img
+                        src="images/SVG/github.svg"
+                        alt="GitHub"
+                        class="github mt-4"
+                      />
+                    </a>
+                    <a
+                      href="https://www.behance.net/anafamaia"
+                      target="_blank"
+                      class="link-icons"
+                    >
+                      <img
+                        src="images/SVG/behance.svg"
+                        alt="Behance"
+                        class="behance mt-4"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-md-7 px-5">
+                    <img
+                      src="images/SVG/hi.svg"
+                      alt="Hi, I'm Filipa!"
+                      class="img-title"
+                    />
+                    <p class="text-about">
+                      As a user-centric visionary with a
+                      <b>strong business mindset</b>, I’m dedicated to crafting
+                      <b>intuitive</b> and <b>impactful</b> digital experiences.
+                      I’m creative, organized, and <b>detail-oriented</b>,
+                      focused on turning <b>ideas into solutions</b> that add
+                      <b>real value</b> for both users and businesses. Always
+                      eager to explore new approaches, I believe that
+                      <b>well-structured design</b> and
+                      <b>quality programming</b> form the foundation of any
+                      successful digital product.
+                    </p>
+                    <h3 class="titles">DIGITAL SKILLS</h3>
+                    <img
+                      src="images/SVG/html.svg"
+                      alt="Icon HTML"
+                      class="icons-skills icons-skills-35"
+                    />
+                    <img
+                      src="images/SVG/css.svg"
+                      alt="Icon CSS"
+                      class="icons-skills icons-skills-35"
+                    />
+                    <img
+                      src="images/SVG/js.svg"
+                      alt="Icon JavaScript"
+                      class="icons-skills icons-skills-40"
+                    />
+                    <img
+                      src="images/SVG/bootstrap.svg"
+                      alt="Icon Bootstrap"
+                      class="icons-skills icons-skills-49"
+                    />
+                    <img
+                      src="images/SVG/figma.svg"
+                      alt="Icon Figma"
+                      class="icons-skills icons-skills-30"
+                    />
+                    <img
+                      src="images/SVG/ai.svg"
+                      alt="Icon Adobe Illustrator"
+                      class="icons-skills icons-skills-40"
+                    />
+                    <img
+                      src="images/SVG/ae.svg"
+                      alt="Icon Adobe After Effects"
+                      class="icons-skills icons-skills-40"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
         </div>
       </div>
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal2')">&times;</span>
-          <p>Esta é a Casa 2</p>
+
+      <div id="modal-projects" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h1 class="titles">PROJECTS</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container text-center">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <a href="">
+                      <img
+                        src="images/SVG/filipastown.svg"
+                        alt="Filipa's Town"
+                        class="projects filipasTown"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="">
+                      <img
+                        src="images/SVG/illustration.svg"
+                        alt="Illustration"
+                        class="projects illustration"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
         </div>
       </div>
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal3')">&times;</span>
-          <p>Esta é a Casa 3</p>
+
+      <div id="modal-curious" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="titles">CURIOUS?</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-12 text-center">
+                    <p>OLÁ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
         </div>
       </div>
     </main>
@@ -124,6 +290,5 @@
         <p id="footer">Website designed and created by Ana Filipa Maia</p>
       </div>
     </footer>
-    <script src="app/resizer.js"></script>
   </body>
 </html>
