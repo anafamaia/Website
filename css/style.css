@@ -39,6 +39,7 @@ body {
 @media only screen and (max-width: 576px) {
   #logo {
     width: 60px;
+    margin-top: 3%;
   }
 }
 
@@ -74,6 +75,7 @@ body {
 .modal-header .btn-close {
   font-size: 25px;
   font-weight: bold;
+  margin: 0;
 }
 
 .modal-footer {
@@ -157,6 +159,10 @@ p {
 
 /*modal projects*/
 
+.container-projects {
+  max-height: 100%;
+}
+
 .filipasTown {
   max-width: 300px;
 }
@@ -166,10 +172,6 @@ p {
 }
 
 /*modal Filipa's Town*/
-
-.project-titles {
-  width: 100px;
-}
 
 .h3-projects {
   font-size: 28px;
@@ -184,6 +186,35 @@ p {
 }
 
 /*modal Illustration*/
+
+.icon-ai {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.illustration-logo {
+  width: 200px;
+}
+
+.illustration-img {
+  width: 700px;
+}
+
+.illustration-img-icon {
+  width: 50px;
+}
+
+.illustration-img-icon-45 {
+  width: 45px;
+}
+
+.illustration-img-icon-62 {
+  width: 62px;
+}
+
+.illustration-img-icon-37 {
+  width: 37px;
+}
 
 /*modal curious*/
 
@@ -216,8 +247,12 @@ p {
   text-decoration: none;
 }
 
+.img-chat {
+  width: 95px;
+}
+
 .img-download {
-  width: 200px;
+  width: 125px;
   display: inline-block;
 }
 
