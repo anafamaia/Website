@@ -8,11 +8,15 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 #logo {
-  margin-top: 1.5%;
   width: 85px;
+}
+
+.logotipo {
+  margin-top: 1.5%;
   height: auto;
   position: absolute;
 }
@@ -24,22 +28,9 @@ body {
   display: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 993px) {
   #background-desktop {
     display: block;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  #background-mobile {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  #logo {
-    width: 60px;
-    margin-top: 3%;
   }
 }
 
@@ -70,11 +61,11 @@ body {
 
 .modal-header {
   border-bottom: none;
+  align-items: start;
 }
 
 .modal-header .btn-close {
   font-size: 25px;
-  font-weight: bold;
   margin: 0;
 }
 
@@ -113,8 +104,16 @@ p {
 
 /*modal about me*/
 
+.about-pop {
+  display: none;
+  width: 125px;
+  position: absolute;
+  top: 21%;
+  left: 25%;
+}
+
 .logo-about {
-  width: 255px;
+  width: 240px;
   height: auto;
   display: block;
 }
@@ -134,7 +133,7 @@ p {
 .linkedin,
 .github,
 .behance {
-  width: 50px;
+  width: 40px;
 }
 
 .icons-skills {
@@ -159,16 +158,31 @@ p {
 
 /*modal projects*/
 
-.container-projects {
-  max-height: 100%;
+.projects-pop {
+  display: none;
+  position: absolute;
+  width: 130px;
+  top: 60%;
+  left: 57%;
 }
 
 .filipasTown {
-  max-width: 300px;
+  max-width: 250px;
 }
 
 .illustration {
-  max-width: 350px;
+  max-width: 300px;
+}
+
+.link-figma {
+  text-decoration: none;
+  display: block;
+}
+
+.link-text-figma-des,
+.link-text-figma-mob {
+  width: 200px;
+  display: block;
 }
 
 /*modal Filipa's Town*/
@@ -183,6 +197,29 @@ p {
   font-size: 22px;
   color: #312f2f;
   font-weight: 700;
+}
+
+.figjam-img {
+  width: 700px;
+}
+
+.figma-15,
+.html-15,
+.css-15 {
+  width: 15px;
+}
+
+.ai-18,
+.js-20 {
+  width: 18px;
+}
+
+.bootstrap-20 {
+  width: 22px;
+}
+
+.github-project {
+  width: 30px;
 }
 
 /*modal Illustration*/
@@ -217,6 +254,14 @@ p {
 }
 
 /*modal curious*/
+
+.curious-pop {
+  display: none;
+  width: 140px;
+  position: absolute;
+  top: 24%;
+  left: 77%;
+}
 
 .h3-curious {
   font-size: 22px;
@@ -258,4 +303,65 @@ p {
 
 .div-curious {
   margin: 30px;
+}
+
+.fun-fact {
+  width: 25px;
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+  #background-mobile {
+    display: block;
+  }
+  .titles {
+    text-align: center;
+  }
+  .logo-about {
+    width: 200px;
+    height: auto;
+    display: block;
+  }
+  .img-title {
+    width: 250px;
+    height: auto;
+    margin-top: 25px;
+  }
+  .div-about {
+    display: flex;
+    justify-content: center;
+  }
+  .linkedin,
+  .github,
+  .behance {
+    width: 35px;
+  }
+  .icons-skills {
+    margin-right: 5px;
+  }
+  .icons-skills-30 {
+    width: 20px;
+  }
+  .icons-skills-35 {
+    width: 25px;
+  }
+  .icons-skills-40 {
+    width: 30px;
+  }
+  .icons-skills-49 {
+    width: 39px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #background-mobile {
+    display: block;
+  }
+  #logo {
+    width: 60px;
+    margin-top: 3%;
+  }
+  .titles,
+  .modal-title {
+    font-size: 22px;
+  }
 }

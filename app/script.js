@@ -3,85 +3,178 @@ window.addEventListener("load", function () {
   imageMapResize();
 });
 
+//imagemap funcional em mobile
+let desktop = document.querySelector("#imagemap-desktop");
+let idAboutMe = document.querySelector("#aboutMeDesktop");
+let idProjects = document.querySelector("#projectsDesktop");
+let idCurious = document.querySelector("#curiousDesktop");
+
+if (window.innerWidth <= 992) {
+  desktop.name = "imagemap-mobile";
+  idAboutMe.coords = "411,1843,1104,1840,1104,1342,1017,1129,433,1129,411,1153";
+  idProjects.coords =
+    "1905,3245,2627,3245,2627,2888,2497,2769,2497,2622,2111,2622,1905,2898";
+  idCurious.coords = "433,4804,1104,4804,1104,4446,939,4051,557,4051,433,4446";
+}
+
+// window.addEventListener("load", function () {
+//   initIntroStars(); // Inicializa as estrelas na animação do GIF
+
+//   setTimeout(function () {
+//     const loading = document.getElementsByClassName("loading");
+//     const animation = document.getElementsByClassName("animation");
+
+//     // Diminui o tamanho do GIF e aplica fade-out
+//     animation.style.transform = "scale(0.5)";
+//     animation.style.opacity = "0";
+
+//     // Aguarda a transição do GIF antes de ocultar o container
+//     setTimeout(function () {
+//       loading.classList.add("hidden");
+//     }, 2000); // 2000ms = 2 segundos para corresponder ao tempo de transição
+//   }, 4000); // 4000ms = 4 segundos para exibir o GIF inicialmente
+// });
+
 //modal About Me
-function openModalAbout(modalAbout) {
+function openModalAbout() {
   document.getElementById("modal-about").style.display = "block";
 }
 
-function closeModalAbout(modalAbout) {
+function closeModalAbout() {
   document.getElementById("modal-about").style.display = "none";
 }
 
 let modalAbout = document.querySelector("#modal-about");
-modalAbout.addEventListener("click", openModalAbout);
+let closeBtnAbout = document.querySelector("#modal-about .btn-close");
 
-let closeBtn = document.querySelector("#modal-about .btn-close");
-modalAbout.addEventListener("click", closeModalAbout);
+modalAbout.addEventListener("click", function (event) {
+  if (event.target === modalAbout) {
+    closeModalAbout();
+  }
+});
+
+closeBtnAbout.addEventListener("click", closeModalAbout);
+
+//Pop-up About me
+let aboutPop = document.querySelector(".about-pop");
+
+idAboutMe.addEventListener("mouseenter", function () {
+  aboutPop.style.display = "block";
+});
+
+idAboutMe.addEventListener("mouseleave", function () {
+  aboutPop.style.display = "none";
+});
 
 //modal Projects
-function openModalProjects(modalProjects) {
+function openModalProjects() {
   document.getElementById("modal-projects").style.display = "block";
 }
 
-function closeModalProjects(modalProjects) {
+function closeModalProjects() {
   document.getElementById("modal-projects").style.display = "none";
 }
 
 let modalProjects = document.querySelector("#modal-projects");
-modalProjects.addEventListener("click", openModalProjects);
+let closeBtnProjects = document.querySelector("#modal-projects .btn-close");
 
-let closeBtn2 = document.querySelector("#modal-projects .btn-close");
-modalProjects.addEventListener("click", closeModalProjects);
+modalProjects.addEventListener("click", function (event) {
+  if (event.target === modalProjects) {
+    closeModalProjects();
+  }
+});
+
+closeBtnProjects.addEventListener("click", closeModalProjects);
+
+//Pop-up Projects
+let projectsPop = document.querySelector(".projects-pop");
+
+idProjects.addEventListener("mouseenter", function () {
+  projectsPop.style.display = "block";
+});
+
+idProjects.addEventListener("mouseleave", function () {
+  projectsPop.style.display = "none";
+});
 
 //modal Curious
-function openModalCurious(modalCurious) {
+function openModalCurious() {
   document.getElementById("modal-curious").style.display = "block";
 }
 
-function closeModalCurious(modalCurious) {
+function closeModalCurious() {
   document.getElementById("modal-curious").style.display = "none";
 }
 
 let modalCurious = document.querySelector("#modal-curious");
-modalCurious.addEventListener("click", openModalCurious);
+let closeBtnCurious = document.querySelector("#modal-curious .btn-close");
 
-let closeBtn3 = document.querySelector("#modal-curious .btn-close");
-modalCurious.addEventListener("click", closeModalCurious);
+modalCurious.addEventListener("click", function (event) {
+  if (event.target === modalCurious) {
+    closeModalCurious();
+  }
+});
+
+closeBtnCurious.addEventListener("click", closeModalCurious);
+
+//Pop-up Curious
+let curiousPop = document.querySelector(".curious-pop");
+
+idCurious.addEventListener("mouseenter", function () {
+  curiousPop.style.display = "block";
+});
+
+idCurious.addEventListener("mouseleave", function () {
+  curiousPop.style.display = "none";
+});
 
 //modal Filipa's Town
-function openModalFilipasTown(modalFilipasTown) {
+function openModalFilipasTown() {
   document.getElementById("modal-filipas-town").style.display = "block";
 }
 
-function closeModalFilipasTown(modalFilipasTown) {
+function closeModalFilipasTown() {
   document.getElementById("modal-filipas-town").style.display = "none";
   document.getElementById("modal-projects").style.display = "block";
 }
 
 let modalFilipasTown = document.querySelector("#modal-filipas-town");
-modalFilipasTown.addEventListener("click", openModalFilipasTown);
+let closeBtnFilipasTown = document.querySelector(
+  "#modal-filipas-town .btn-close"
+);
 
-let closeBtn4 = document.querySelector("#modal-filipas-town .btn-close");
-modalFilipasTown.addEventListener("click", closeModalFilipasTown);
+modalFilipasTown.addEventListener("click", function (event) {
+  if (event.target === modalFilipasTown) {
+    closeModalFilipasTown();
+  }
+});
+
+closeBtnFilipasTown.addEventListener("click", closeModalFilipasTown);
 
 //modal Illustration
-function openModalIllustration(modalIllustration) {
+function openModalIllustration() {
   document.getElementById("modal-illustration").style.display = "block";
 }
 
-function closeModalIllustration(modalIllustration) {
+function closeModalIllustration() {
   document.getElementById("modal-illustration").style.display = "none";
   document.getElementById("modal-projects").style.display = "block";
 }
 
 let modalIllustration = document.querySelector("#modal-illustration");
-modalIllustration.addEventListener("click", openModalIllustration);
+let closeBtnIllustration = document.querySelector(
+  "#modal-illustration .btn-close"
+);
 
-let closeBtn5 = document.querySelector("#modal-illustration .btn-close");
-modalIllustration.addEventListener("click", closeModalIllustration);
+modalIllustration.addEventListener("click", function (event) {
+  if (event.target === modalIllustration) {
+    closeModalIllustration();
+  }
+});
+
+closeBtnIllustration.addEventListener("click", closeModalIllustration);
 
 //mudar cor dos icons das redes sociais
-
 let linkedin = document.querySelector(".linkedin");
 
 linkedin.addEventListener("mouseenter", function () {
@@ -112,8 +205,17 @@ behance.addEventListener("mouseleave", function () {
   behance.src = "images/SVG/behance.svg";
 });
 
-//mudar cor dos icons dos projetos
+let githubProjects = document.querySelector(".github-project");
 
+githubProjects.addEventListener("mouseenter", function () {
+  githubProjects.src = "images/SVG/github-ver.svg";
+});
+
+githubProjects.addEventListener("mouseleave", function () {
+  githubProjects.src = "images/SVG/github.svg";
+});
+
+//mudar cor dos icons dos projetos
 let filipasTown = document.querySelector(".filipasTown");
 
 filipasTown.addEventListener("mouseenter", function () {
@@ -149,7 +251,7 @@ downloadCv.addEventListener("mouseleave", function () {
 let letsChat = document.querySelectorAll(".img-chat");
 
 letsChat.forEach(function (chat) {
-  chat.addEventListener("mouseenter", function () {
+  chat.addEventListener("mouseover", function () {
     chat.src = "images/SVG/chat-ver.svg";
   });
 
@@ -161,19 +263,23 @@ letsChat.forEach(function (chat) {
 //atualizar data no footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-//imagemap funcional em mobile
-let desktop = document.querySelector("#imagemap-desktop");
+//mudar cor texto figma protótipo
+let figmaTextDes = document.querySelector(".link-text-figma-des");
 
-let idAboutMe = document.querySelector("#aboutMeDesktop");
+figmaTextDes.addEventListener("mouseenter", function () {
+  figmaTextDes.src = "images/SVG/figma-proto-des-ver.svg";
+});
 
-let idProjects = document.querySelector("#projectsDesktop");
+figmaTextDes.addEventListener("mouseleave", function () {
+  figmaTextDes.src = "images/SVG/figma-proto-des.svg";
+});
 
-let idCurious = document.querySelector("#curiousDesktop");
+let figmaTextMob = document.querySelector(".link-text-figma-mob");
 
-if (window.innerWidth <= 1023) {
-  desktop.name = "imagemap-mobile";
-  idAboutMe.coords = "411,1843,1104,1840,1104,1342,1017,1129,433,1129,411,1153";
-  idProjects.coords =
-    "1905,3245,2627,3245,2627,2888,2497,2769,2497,2622,2111,2622,1905,2898";
-  idCurious.coords = "433,4804,1104,4804,1104,4446,939,4051,557,4051,433,4446";
-}
+figmaTextMob.addEventListener("mouseenter", function () {
+  figmaTextMob.src = "images/SVG/figma-proto-mob-ver.svg";
+});
+
+figmaTextMob.addEventListener("mouseleave", function () {
+  figmaTextMob.src = "images/SVG/figma-proto-mob.svg";
+});
