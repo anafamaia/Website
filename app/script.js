@@ -15,6 +15,10 @@ if (window.innerWidth <= 992) {
   idProjects.coords =
     "1905,3245,2627,3245,2627,2888,2497,2769,2497,2622,2111,2622,1905,2898";
   idCurious.coords = "433,4804,1104,4804,1104,4446,939,4051,557,4051,433,4446";
+
+  aboutPop.style.display = "none";
+  projectsPop.style.display = "none";
+  curiousPop.style.display = "none";
 }
 
 // window.addEventListener("load", function () {
@@ -37,7 +41,7 @@ if (window.innerWidth <= 992) {
 
 //modal About Me
 function openModalAbout() {
-  document.getElementById("modal-about").style.display = "block";
+  document.getElementById("modal-about").style.display = "flex";
 }
 
 function closeModalAbout() {
@@ -46,6 +50,10 @@ function closeModalAbout() {
 
 let modalAbout = document.querySelector("#modal-about");
 let closeBtnAbout = document.querySelector("#modal-about .btn-close");
+// closeBtnAbout.style.setProperty(
+//   "--bs-btn-close-bg",
+//   "url('images/SVG/close.svg')"
+// );
 
 modalAbout.addEventListener("click", function (event) {
   if (event.target === modalAbout) {
@@ -68,7 +76,7 @@ idAboutMe.addEventListener("mouseleave", function () {
 
 //modal Projects
 function openModalProjects() {
-  document.getElementById("modal-projects").style.display = "block";
+  document.getElementById("modal-projects").style.display = "flex";
 }
 
 function closeModalProjects() {
@@ -99,7 +107,7 @@ idProjects.addEventListener("mouseleave", function () {
 
 //modal Curious
 function openModalCurious() {
-  document.getElementById("modal-curious").style.display = "block";
+  document.getElementById("modal-curious").style.display = "flex";
 }
 
 function closeModalCurious() {
@@ -229,11 +237,11 @@ filipasTown.addEventListener("mouseleave", function () {
 let illustration = document.querySelector(".illustration");
 
 illustration.addEventListener("mouseenter", function () {
-  illustration.src = "images/SVG/illustration-ver.svg";
+  illustration.src = "images/SVG/illustrations-ver.svg";
 });
 
 illustration.addEventListener("mouseleave", function () {
-  illustration.src = "images/SVG/illustration.svg";
+  illustration.src = "images/SVG/illustrations.svg";
 });
 
 //mudar cor do botão download cv
@@ -283,3 +291,93 @@ figmaTextMob.addEventListener("mouseenter", function () {
 figmaTextMob.addEventListener("mouseleave", function () {
   figmaTextMob.src = "images/SVG/figma-proto-mob.svg";
 });
+
+//mudar url botão fechar modal
+
+// let closeBtnModal = document.querySelectorAll(".btn-close");
+// closeBtnModal.style.setProperty(
+//   "--bs-btn-close-bg",
+//   "url('images/SVG/close.svg')"
+// );
+
+// Widget de acessibilidade
+
+// Função para alternar a visibilidade do menu de acessibilidade
+function toggleAccessibilityMenu() {
+  const menu = document.getElementById("accessibility-menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+// Variáveis para armazenar o estado de cada modo de acessibilidade
+let isDeuteranopia = false;
+let isProtanopia = false;
+let isTritanopia = false;
+let isHighContrast = false;
+let isLargeFont = false;
+
+// Funções para alternar os modos de daltonismo
+function toggleDeuteranopia() {
+  resetFilters();
+  isDeuteranopia = !isDeuteranopia;
+  document.body.classList.toggle("deuteranopia", isDeuteranopia);
+}
+
+function toggleProtanopia() {
+  resetFilters();
+  isProtanopia = !isProtanopia;
+  document.body.classList.toggle("protanopia", isProtanopia);
+}
+
+function toggleTritanopia() {
+  resetFilters();
+  isTritanopia = !isTritanopia;
+  document.body.classList.toggle("tritanopia", isTritanopia);
+}
+
+// Função para alternar alto contraste
+function toggleContrast() {
+  isHighContrast = !isHighContrast;
+  document.body.classList.toggle("high-contrast", isHighContrast);
+}
+
+// Funções para aumentar e diminuir o tamanho do texto
+function increaseFontSize() {
+  if (!isLargeFont) {
+    document.body.classList.add("large-font");
+    document.body.classList.remove("small-font");
+    isLargeFont = true;
+  }
+}
+
+function decreaseFontSize() {
+  if (isLargeFont) {
+    document.body.classList.remove("large-font");
+    document.body.classList.add("small-font");
+    isLargeFont = false;
+  }
+}
+
+// Função para limpar todos os modos de daltonismo antes de ativar um novo
+function resetFilters() {
+  document.body.classList.remove("deuteranopia", "protanopia", "tritanopia");
+  isDeuteranopia = isProtanopia = isTritanopia = false;
+}
+
+// Função para sair do modo de acessibilidade e restaurar o estado inicial
+function resetAccessibility() {
+  document.body.classList.remove(
+    "deuteranopia",
+    "protanopia",
+    "tritanopia",
+    "high-contrast",
+    "large-font",
+    "small-font"
+  );
+  isDeuteranopia =
+    isProtanopia =
+    isTritanopia =
+    isHighContrast =
+    isLargeFont =
+      false;
+  document.getElementById("accessibility-menu").style.display = "none";
+}

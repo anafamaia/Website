@@ -158,7 +158,7 @@
                       />
                     </a>
                   </div>
-                  <div class="col-lg-7 px-5">
+                  <div class="col-lg-7">
                     <div class="div-about">
                       <img
                         src="images/SVG/hi.svg"
@@ -261,7 +261,7 @@
                       onclick="openModalIllustration('modal-illustration')"
                     >
                       <img
-                        src="images/SVG/illustration.svg"
+                        src="images/SVG/illustrations.svg"
                         alt="Illustration"
                         class="projects illustration"
                       />
@@ -297,7 +297,7 @@
             <div class="modal-body">
               <div class="container">
                 <div class="row mb-5">
-                  <div class="col-lg-7 text-start">
+                  <div class="col-lg-6">
                     <h3 class="h3-projects">Project Overview</h3>
                     <h4 class="h4-projects">Goal</h4>
                     <p class="p-projects">
@@ -323,7 +323,7 @@
                   </div>
                 </div>
                 <div class="row mb-5 justify-content-end">
-                  <div class="col-lg-7">
+                  <div class="col-lg-6">
                     <h3 class="h3-projects text-end">Design Process</h3>
                     <h4 class="h4-projects text-end">Tools Used</h4>
                     <ul>
@@ -374,7 +374,7 @@
                   </div>
                 </div>
                 <div class="row mb-5">
-                  <div class="col-lg-7 text-start">
+                  <div class="col-lg-6 text-start">
                     <h3 class="h3-projects">Development & Implementation</h3>
                     <h4 class="h4-projects">Technologies</h4>
                     <ul>
@@ -424,7 +424,7 @@
                   </div>
                 </div>
                 <div class="row mb-5 justify-content-end">
-                  <div class="col-lg-7">
+                  <div class="col-lg-6">
                     <h3 class="h3-projects text-end">Challenges & Solutions</h3>
                     <ul>
                       <li>
@@ -452,7 +452,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-lg-7 text-start">
+                  <div class="col-lg-6 text-start">
                     <h3 class="h3-projects">Results</h3>
                     <ul>
                       <li><b>Interactive Design</b> praised for creativity.</li>
@@ -475,7 +475,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <img
-                src="images/SVG/illustration-ver.svg"
+                src="images/SVG/illustrations-ver.svg"
                 alt="Illustration"
                 class="illustration w-100 mx-auto d-block"
               />
@@ -488,8 +488,8 @@
             </div>
             <div class="modal-body">
               <div class="container">
-                <div class="row">
-                  <div class="col text-start">
+                <div class="row mb-5">
+                  <div class="col">
                     <h4 class="h4-projects">
                       Logo for the Filipa's Town Project
                       <span>
@@ -507,7 +507,7 @@
                     />
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                   <div class="col text-end">
                     <h4 class="h4-projects">
                       Desktop Background for the Filipa's Town Project
@@ -526,8 +526,8 @@
                     />
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col text-start">
+                <div class="row mb-5">
+                  <div class="col">
                     <h4 class="h4-projects">
                       Mobile Background for the Filipa's Town Project
                       <span>
@@ -545,7 +545,7 @@
                     />
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                   <div class="col text-end">
                     <h4 class="h4-projects">
                       Icons for the Filipa's Town Project
@@ -609,6 +609,25 @@
                     />
                   </div>
                 </div>
+                <div class="row mb-5">
+                  <div class="col">
+                    <h4 class="h4-projects">
+                      Animation loading for the Filipa's Town Project
+                      <span>
+                        <img
+                          src="images/SVG/ai.svg"
+                          alt="Adobe Illustrator icon"
+                          class="icon-ai"
+                        />
+                      </span>
+                    </h4>
+                    <img
+                      src="images/bg-mb.webp"
+                      alt="Background Mobile"
+                      class="illustration-img"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div class="modal-footer"></div>
@@ -631,7 +650,7 @@
             <div class="modal-body">
               <div class="container">
                 <div class="row align-items-center">
-                  <div class="col-md-12">
+                  <div class="col-lg-12">
                     <div class="div-curious">
                       <h3 class="h3-curious">
                         <img
@@ -724,6 +743,26 @@
       </div>
       <div class="curious-pop">
         <img src="images/SVG/curious.svg" alt="Curious" />
+      </div>
+
+      <div id="accessibility-widget">
+        <button id="accessibility-button" onclick="toggleAccessibilityMenu()">
+          🦽
+        </button>
+        <div id="accessibility-menu" style="display: none">
+          <button id="close-accessibility" onclick="resetAccessibility()">
+            ✖
+          </button>
+          <h3>Opções de Acessibilidade</h3>
+          <button onclick="toggleDeuteranopia()">
+            Daltonismo - Deuteranopia
+          </button>
+          <button onclick="toggleProtanopia()">Daltonismo - Protanopia</button>
+          <button onclick="toggleTritanopia()">Daltonismo - Tritanopia</button>
+          <button onclick="toggleContrast()">Alto Contraste</button>
+          <button onclick="increaseFontSize()">Aumentar Fonte</button>
+          <button onclick="decreaseFontSize()">Diminuir Fonte</button>
+        </div>
       </div>
     </main>
 

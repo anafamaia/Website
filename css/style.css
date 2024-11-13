@@ -44,6 +44,7 @@ body {
   height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
 }
 
 .modal-content {
@@ -167,22 +168,11 @@ p {
 }
 
 .filipasTown {
-  max-width: 250px;
-}
-
-.illustration {
   max-width: 300px;
 }
 
-.link-figma {
-  text-decoration: none;
-  display: block;
-}
-
-.link-text-figma-des,
-.link-text-figma-mob {
-  width: 200px;
-  display: block;
+.illustration {
+  max-width: 350px;
 }
 
 /*modal Filipa's Town*/
@@ -220,6 +210,17 @@ p {
 
 .github-project {
   width: 30px;
+}
+
+.link-figma {
+  text-decoration: none;
+  display: block;
+}
+
+.link-text-figma-des,
+.link-text-figma-mob {
+  width: 200px;
+  display: block;
 }
 
 /*modal Illustration*/
@@ -276,16 +277,7 @@ p {
 }
 
 .link-curious {
-  font-weight: 700;
-  color: #312f2f;
   text-decoration: none;
-}
-
-.link-curious:hover {
-  color: #ef3f36;
-  transition: all 150ms ease-in-out;
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 .cv-link {
@@ -301,13 +293,113 @@ p {
   display: inline-block;
 }
 
-.div-curious {
-  margin: 30px;
-}
-
 .fun-fact {
   width: 25px;
 }
+
+/* widget de Acessibilidade */
+/* Estilos do botão principal do widget */
+#accessibility-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#accessibility-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+#accessibility-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos do menu de acessibilidade */
+#accessibility-menu {
+  display: none;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 220px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos do cabeçalho e do botão de saída */
+#close-accessibility {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+#accessibility-menu h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Estilos dos botões dentro do menu */
+#accessibility-menu button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#accessibility-menu button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Estilos de acessibilidade */
+.deuteranopia {
+  filter: hue-rotate(180deg) brightness(0.9);
+}
+
+.protanopia {
+  filter: sepia(100%) hue-rotate(90deg) saturate(150%);
+}
+
+.tritanopia {
+  filter: hue-rotate(-50deg) brightness(1.2);
+}
+
+.high-contrast {
+  filter: contrast(2) brightness(1.2);
+}
+
+.large-font {
+  font-size: 1.25em;
+}
+
+.small-font {
+  font-size: 0.9em;
+}
+
+/*media querie para tablets*/
 
 @media only screen and (min-width: 577px) and (max-width: 992px) {
   #background-mobile {
@@ -350,8 +442,12 @@ p {
   .icons-skills-49 {
     width: 39px;
   }
+  .figjam-img {
+    max-width: 100%;
+  }
 }
 
+/*media querie para telemóveis*/
 @media only screen and (max-width: 576px) {
   #background-mobile {
     display: block;
@@ -360,8 +456,107 @@ p {
     width: 60px;
     margin-top: 3%;
   }
+  p,
+  ul {
+    font-size: 14px;
+  }
   .titles,
   .modal-title {
     font-size: 22px;
+    text-align: center;
+  }
+  .logo-about {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+  .img-title {
+    width: 150px;
+    height: auto;
+    margin-top: 25px;
+  }
+  .div-about {
+    display: flex;
+    justify-content: center;
+  }
+  .linkedin,
+  .github,
+  .behance {
+    width: 30px;
+  }
+  .icons-skills {
+    margin-right: 5px;
+  }
+  .icons-skills-30 {
+    width: 15px;
+  }
+  .icons-skills-35 {
+    width: 20px;
+  }
+  .icons-skills-40 {
+    width: 25px;
+  }
+  .icons-skills-49 {
+    width: 34px;
+  }
+  .filipasTown {
+    max-width: 225px;
+  }
+
+  .illustration {
+    max-width: 250px;
+  }
+  .h3-projects {
+    font-size: 20px;
+  }
+
+  .h4-projects,
+  .h3-curious {
+    font-size: 18px;
+  }
+
+  .figjam-img {
+    max-width: 100%;
+  }
+  .icon-ai {
+    width: 20px;
+    margin-left: 6px;
+  }
+  .illustration-logo {
+    width: 125px;
+  }
+
+  .illustration-img {
+    max-width: 100%;
+  }
+
+  .illustration-img-icon {
+    width: 30px;
+  }
+
+  .illustration-img-icon-45 {
+    width: 30px;
+  }
+
+  .illustration-img-icon-62 {
+    width: 38px;
+  }
+
+  .illustration-img-icon-37 {
+    width: 22px;
+  }
+  .h4-curious {
+    font-size: 16px;
+  }
+  .img-chat {
+    width: 70px;
+  }
+
+  .img-download {
+    width: 100px;
+  }
+
+  .fun-fact {
+    width: 15px;
   }
 }
