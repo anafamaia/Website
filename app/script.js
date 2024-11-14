@@ -21,6 +21,7 @@ if (window.innerWidth <= 992) {
   curiousPop.style.display = "none";
 }
 
+//animação loading
 // window.addEventListener("load", function () {
 //   initIntroStars(); // Inicializa as estrelas na animação do GIF
 
@@ -50,10 +51,6 @@ function closeModalAbout() {
 
 let modalAbout = document.querySelector("#modal-about");
 let closeBtnAbout = document.querySelector("#modal-about .btn-close");
-// closeBtnAbout.style.setProperty(
-//   "--bs-btn-close-bg",
-//   "url('images/SVG/close.svg')"
-// );
 
 modalAbout.addEventListener("click", function (event) {
   if (event.target === modalAbout) {
@@ -138,12 +135,12 @@ idCurious.addEventListener("mouseleave", function () {
 
 //modal Filipa's Town
 function openModalFilipasTown() {
-  document.getElementById("modal-filipas-town").style.display = "block";
+  document.getElementById("modal-filipas-town").style.display = "flex";
 }
 
 function closeModalFilipasTown() {
   document.getElementById("modal-filipas-town").style.display = "none";
-  document.getElementById("modal-projects").style.display = "block";
+  document.getElementById("modal-projects").style.display = "flex";
 }
 
 let modalFilipasTown = document.querySelector("#modal-filipas-town");
@@ -161,12 +158,12 @@ closeBtnFilipasTown.addEventListener("click", closeModalFilipasTown);
 
 //modal Illustration
 function openModalIllustration() {
-  document.getElementById("modal-illustration").style.display = "block";
+  document.getElementById("modal-illustration").style.display = "flex";
 }
 
 function closeModalIllustration() {
   document.getElementById("modal-illustration").style.display = "none";
-  document.getElementById("modal-projects").style.display = "block";
+  document.getElementById("modal-projects").style.display = "flex";
 }
 
 let modalIllustration = document.querySelector("#modal-illustration");

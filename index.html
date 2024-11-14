@@ -651,7 +651,7 @@
               <div class="container">
                 <div class="row align-items-center">
                   <div class="col-lg-12">
-                    <div class="div-curious">
+                    <div class="div-curious mb-4">
                       <h3 class="h3-curious">
                         <img
                           src="images/SVG/fun-fact.svg"
@@ -668,7 +668,7 @@
                         colorful pieces!
                       </p>
                     </div>
-                    <div class="div-curious">
+                    <div class="div-curious mb-4">
                       <h3 class="h3-curious">Want to know more?</h3>
                       <h4 class="h4-curious">
                         Got questions? A fun idea? Or just curious?
@@ -716,7 +716,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="div-curious">
+                    <div class="div-curious mb-4">
                       <h3 class="h3-curious">
                         Or...
                         <a
@@ -747,13 +747,15 @@
 
       <div id="accessibility-widget">
         <button id="accessibility-button" onclick="toggleAccessibilityMenu()">
-          🦽
+          ♿
         </button>
         <div id="accessibility-menu" style="display: none">
-          <button id="close-accessibility" onclick="resetAccessibility()">
-            ✖
-          </button>
-          <h3>Opções de Acessibilidade</h3>
+          <div class="menu-header">
+            <h3>Opções de Acessibilidade</h3>
+            <button id="close-accessibility" onclick="resetAccessibility()">
+              ✖
+            </button>
+          </div>
           <button onclick="toggleDeuteranopia()">
             Daltonismo - Deuteranopia
           </button>
@@ -769,8 +771,8 @@
     <footer>
       <div class="d-flex justify-content-center align-items-center">
         <p id="footer">
-          © 2024 - <span id="year">Ano Atual</span> Ana Filipa Maia | Crafted
-          with creativity and code
+          © 2024 - <span id="year">Ano Atual</span> Ana Filipa Maia |
+          <span class="footer-mobile"> Crafted with creativity and code</span>
         </p>
       </div>
     </footer>
