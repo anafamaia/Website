@@ -75,7 +75,7 @@ body {
 
 .modal-footer {
   border-top: none;
-  padding: 22px;
+  padding: 20px;
 }
 
 footer {
@@ -192,7 +192,7 @@ p {
   font-weight: 700;
 }
 
-.figjam-img {
+.sitemap-img {
   width: 700px;
 }
 
@@ -227,18 +227,34 @@ p {
 }
 
 /*modal Illustration*/
+.illustrations-titles {
+  font-size: 22px;
+  color: #312f2f;
+  font-weight: 700;
+  display: inline;
+}
 
 .icon-ai {
   width: 25px;
   margin-left: 10px;
+  vertical-align: middle;
 }
 
 .illustration-logo {
   width: 200px;
 }
 
+.illustration-img,
+.illustration-img-mb {
+  display: block;
+}
+
 .illustration-img {
   width: 700px;
+}
+
+.illustration-img-mb {
+  width: 400px;
 }
 
 .illustration-img-icon {
@@ -271,7 +287,7 @@ p {
   font-size: 22px;
   font-weight: 700;
   color: #312f2f;
-  display: inline-block;
+  display: inline;
 }
 
 .h4-curious {
@@ -298,49 +314,34 @@ p {
 
 .fun-fact {
   width: 25px;
+  vertical-align: middle;
 }
 
-/* widget de Acessibilidade */
-/* Estilos do botão principal do widget */
+/* widget de acessibilidade */
 #accessibility-widget {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   z-index: 1000;
 }
 
-#accessibility-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+.widget {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
 }
 
-#accessibility-button:hover {
-  background-color: #0056b3;
-}
-
-/* Estilos do menu de acessibilidade */
 #accessibility-menu {
   display: none;
-  background-color: #f9f9f9;
+  background-color: #f6f1ec;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: 220px;
+  width: 225px;
   position: absolute;
   bottom: 70px;
   right: 0;
-  font-family: Arial, sans-serif;
 }
 
-/* Estilos do cabeçalho e do botão de saída */
 .menu-header {
   display: flex;
   justify-content: space-between;
@@ -349,25 +350,30 @@ p {
 
 #accessibility-menu h3 {
   font-size: 16px;
-  color: #333;
+  font-weight: 700;
+  color: #312f2f;
   margin: 0;
 }
 
-#close-accessibility {
+.close-btn {
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
   cursor: pointer;
   padding: 0;
-  margin-left: 10px;
+  transition: color 0.3s;
 }
 
-/* Estilos dos botões dentro do menu */
-#accessibility-menu button {
-  background-color: #e0e0e0;
-  color: #333;
-  border: none;
+.close-btn:hover {
+  color: #ef3f36;
+}
+
+#accessibility-menu button:not(.close-btn) {
+  background-color: #f6f1ec;
+  color: #312f2f;
+  font-size: 15px;
+  border: 1px solid #132fba;
   border-radius: 5px;
   padding: 10px;
   width: 100%;
@@ -377,34 +383,32 @@ p {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#accessibility-menu button:hover {
-  background-color: #007bff;
-  color: #fff;
+#accessibility-menu button:not(.close-btn):hover {
+  background-color: #132fba;
+  color: #f6f1ec;
 }
 
-/* Estilos de acessibilidade */
+#accessibility-button {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
 .deuteranopia {
   filter: hue-rotate(180deg) brightness(0.9);
 }
-
 .protanopia {
   filter: sepia(100%) hue-rotate(90deg) saturate(150%);
 }
-
 .tritanopia {
   filter: hue-rotate(-50deg) brightness(1.2);
 }
-
-.high-contrast {
-  filter: contrast(2) brightness(1.2);
-}
-
-.large-font {
-  font-size: 1.25em;
-}
-
-.small-font {
-  font-size: 0.9em;
+body.monochrome {
+  filter: grayscale(100%);
 }
 
 /*media query para tablets*/
@@ -432,7 +436,7 @@ p {
   .linkedin,
   .github,
   .behance {
-    width: 35px;
+    width: 40px;
   }
   .icons-skills {
     margin-right: 5px;
@@ -452,6 +456,9 @@ p {
   .figjam-img {
     max-width: 100%;
   }
+  .illustration-img {
+    max-width: 100%;
+  }
 }
 
 /*media query para telemóveis*/
@@ -467,13 +474,26 @@ p {
   ul {
     font-size: 14px;
   }
+  ul {
+    padding-left: 20px;
+  }
+  .col-lg-12 {
+    padding: 8px;
+  }
   .titles,
   .modal-title {
     font-size: 22px;
     text-align: center;
   }
+  .modal-header,
+  .modal-body {
+    padding: 10px;
+  }
   .modal-header .btn-close {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .modal-footer {
+    padding: 18px;
   }
   .logo-about {
     width: 100px;
@@ -498,60 +518,60 @@ p {
     margin-right: 5px;
   }
   .icons-skills-30 {
-    width: 15px;
+    width: 19px;
   }
   .icons-skills-35 {
     width: 20px;
   }
   .icons-skills-40 {
-    width: 25px;
+    width: 23px;
   }
   .icons-skills-49 {
-    width: 34px;
+    width: 30px;
   }
   .filipasTown {
     max-width: 225px;
   }
-
   .illustration {
     max-width: 250px;
   }
-  .h3-projects {
-    font-size: 20px;
+  .h3-projects,
+  .h4-projects,
+  .icon-ai {
+    display: flex;
+    justify-content: start;
   }
-
   .h4-projects,
   .h3-curious {
     font-size: 18px;
   }
-
+  .h3-projects,
+  .illustrations-titles {
+    font-size: 20px;
+  }
   .figjam-img {
     max-width: 100%;
   }
   .icon-ai {
     width: 20px;
     margin-left: 6px;
+    display: inline;
   }
   .illustration-logo {
     width: 125px;
   }
-
   .illustration-img {
     max-width: 100%;
   }
-
   .illustration-img-icon {
     width: 30px;
   }
-
   .illustration-img-icon-45 {
-    width: 30px;
+    width: 27px;
   }
-
   .illustration-img-icon-62 {
     width: 38px;
   }
-
   .illustration-img-icon-37 {
     width: 22px;
   }
@@ -561,11 +581,9 @@ p {
   .img-chat {
     width: 70px;
   }
-
   .img-download {
     width: 100px;
   }
-
   .fun-fact {
     width: 15px;
   }

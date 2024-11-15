@@ -3,22 +3,47 @@ window.addEventListener("load", function () {
   imageMapResize();
 });
 
-//imagemap funcional em mobile
+//variáveis
 let desktop = document.querySelector("#imagemap-desktop");
 let idAboutMe = document.querySelector("#aboutMeDesktop");
 let idProjects = document.querySelector("#projectsDesktop");
 let idCurious = document.querySelector("#curiousDesktop");
+let aboutPop = document.querySelector(".about-pop");
+let projectsPop = document.querySelector(".projects-pop");
+let curiousPop = document.querySelector(".curious-pop");
+let modalAbout = document.querySelector("#modal-about");
+let closeBtnAbout = document.querySelector("#modal-about .btn-close");
+let modalProjects = document.querySelector("#modal-projects");
+let closeBtnProjects = document.querySelector("#modal-projects .btn-close");
+let modalCurious = document.querySelector("#modal-curious");
+let closeBtnCurious = document.querySelector("#modal-curious .btn-close");
+let modalFilipasTown = document.querySelector("#modal-filipas-town");
+let closeBtnFilipasTown = document.querySelector(
+  "#modal-filipas-town .btn-close"
+);
+let modalIllustration = document.querySelector("#modal-illustration");
+let closeBtnIllustration = document.querySelector(
+  "#modal-illustration .btn-close"
+);
+let linkedin = document.querySelector(".linkedin");
+let github = document.querySelector(".github");
+let behance = document.querySelector(".behance");
+let githubProjects = document.querySelector(".github-project");
+let filipasTown = document.querySelector(".filipasTown");
+let illustration = document.querySelector(".illustration");
+let downloadCv = document.querySelector(".img-download");
+let letsChat = document.querySelectorAll(".img-chat");
+let figmaTextDes = document.querySelector(".link-text-figma-des");
+let figmaTextMob = document.querySelector(".link-text-figma-mob");
+let accessibilityBtn = document.querySelector(".widget");
 
+//imagemap funcional em mobile
 if (window.innerWidth <= 992) {
   desktop.name = "imagemap-mobile";
   idAboutMe.coords = "411,1843,1104,1840,1104,1342,1017,1129,433,1129,411,1153";
   idProjects.coords =
     "1905,3245,2627,3245,2627,2888,2497,2769,2497,2622,2111,2622,1905,2898";
   idCurious.coords = "433,4804,1104,4804,1104,4446,939,4051,557,4051,433,4446";
-
-  aboutPop.style.display = "none";
-  projectsPop.style.display = "none";
-  curiousPop.style.display = "none";
 }
 
 //animação loading
@@ -49,9 +74,6 @@ function closeModalAbout() {
   document.getElementById("modal-about").style.display = "none";
 }
 
-let modalAbout = document.querySelector("#modal-about");
-let closeBtnAbout = document.querySelector("#modal-about .btn-close");
-
 modalAbout.addEventListener("click", function (event) {
   if (event.target === modalAbout) {
     closeModalAbout();
@@ -59,17 +81,6 @@ modalAbout.addEventListener("click", function (event) {
 });
 
 closeBtnAbout.addEventListener("click", closeModalAbout);
-
-//Pop-up About me
-let aboutPop = document.querySelector(".about-pop");
-
-idAboutMe.addEventListener("mouseenter", function () {
-  aboutPop.style.display = "block";
-});
-
-idAboutMe.addEventListener("mouseleave", function () {
-  aboutPop.style.display = "none";
-});
 
 //modal Projects
 function openModalProjects() {
@@ -80,9 +91,6 @@ function closeModalProjects() {
   document.getElementById("modal-projects").style.display = "none";
 }
 
-let modalProjects = document.querySelector("#modal-projects");
-let closeBtnProjects = document.querySelector("#modal-projects .btn-close");
-
 modalProjects.addEventListener("click", function (event) {
   if (event.target === modalProjects) {
     closeModalProjects();
@@ -90,17 +98,6 @@ modalProjects.addEventListener("click", function (event) {
 });
 
 closeBtnProjects.addEventListener("click", closeModalProjects);
-
-//Pop-up Projects
-let projectsPop = document.querySelector(".projects-pop");
-
-idProjects.addEventListener("mouseenter", function () {
-  projectsPop.style.display = "block";
-});
-
-idProjects.addEventListener("mouseleave", function () {
-  projectsPop.style.display = "none";
-});
 
 //modal Curious
 function openModalCurious() {
@@ -111,9 +108,6 @@ function closeModalCurious() {
   document.getElementById("modal-curious").style.display = "none";
 }
 
-let modalCurious = document.querySelector("#modal-curious");
-let closeBtnCurious = document.querySelector("#modal-curious .btn-close");
-
 modalCurious.addEventListener("click", function (event) {
   if (event.target === modalCurious) {
     closeModalCurious();
@@ -122,16 +116,33 @@ modalCurious.addEventListener("click", function (event) {
 
 closeBtnCurious.addEventListener("click", closeModalCurious);
 
-//Pop-up Curious
-let curiousPop = document.querySelector(".curious-pop");
+//Pop-ups About me, Projects e Curious
 
-idCurious.addEventListener("mouseenter", function () {
-  curiousPop.style.display = "block";
-});
+if (window.innerWidth > 992) {
+  idAboutMe.addEventListener("mouseenter", function () {
+    aboutPop.style.display = "block";
+  });
 
-idCurious.addEventListener("mouseleave", function () {
-  curiousPop.style.display = "none";
-});
+  idAboutMe.addEventListener("mouseleave", function () {
+    aboutPop.style.display = "none";
+  });
+
+  idProjects.addEventListener("mouseenter", function () {
+    projectsPop.style.display = "block";
+  });
+
+  idProjects.addEventListener("mouseleave", function () {
+    projectsPop.style.display = "none";
+  });
+
+  idCurious.addEventListener("mouseenter", function () {
+    curiousPop.style.display = "block";
+  });
+
+  idCurious.addEventListener("mouseleave", function () {
+    curiousPop.style.display = "none";
+  });
+}
 
 //modal Filipa's Town
 function openModalFilipasTown() {
@@ -142,11 +153,6 @@ function closeModalFilipasTown() {
   document.getElementById("modal-filipas-town").style.display = "none";
   document.getElementById("modal-projects").style.display = "flex";
 }
-
-let modalFilipasTown = document.querySelector("#modal-filipas-town");
-let closeBtnFilipasTown = document.querySelector(
-  "#modal-filipas-town .btn-close"
-);
 
 modalFilipasTown.addEventListener("click", function (event) {
   if (event.target === modalFilipasTown) {
@@ -166,11 +172,6 @@ function closeModalIllustration() {
   document.getElementById("modal-projects").style.display = "flex";
 }
 
-let modalIllustration = document.querySelector("#modal-illustration");
-let closeBtnIllustration = document.querySelector(
-  "#modal-illustration .btn-close"
-);
-
 modalIllustration.addEventListener("click", function (event) {
   if (event.target === modalIllustration) {
     closeModalIllustration();
@@ -180,8 +181,6 @@ modalIllustration.addEventListener("click", function (event) {
 closeBtnIllustration.addEventListener("click", closeModalIllustration);
 
 //mudar cor dos icons das redes sociais
-let linkedin = document.querySelector(".linkedin");
-
 linkedin.addEventListener("mouseenter", function () {
   linkedin.src = "images/SVG/linkedin-ver.svg";
 });
@@ -190,7 +189,13 @@ linkedin.addEventListener("mouseleave", function () {
   linkedin.src = "images/SVG/linkedin.svg";
 });
 
-let github = document.querySelector(".github");
+linkedin.addEventListener("touchstart", function () {
+  linkedin.src = "images/SVG/linkedin-ver.svg";
+});
+
+linkedin.addEventListener("touchend", function () {
+  linkedin.src = "images/SVG/linkedin.svg";
+});
 
 github.addEventListener("mouseenter", function () {
   github.src = "images/SVG/github-ver.svg";
@@ -200,8 +205,6 @@ github.addEventListener("mouseleave", function () {
   github.src = "images/SVG/github.svg";
 });
 
-let behance = document.querySelector(".behance");
-
 behance.addEventListener("mouseenter", function () {
   behance.src = "images/SVG/behance-ver.svg";
 });
@@ -209,8 +212,6 @@ behance.addEventListener("mouseenter", function () {
 behance.addEventListener("mouseleave", function () {
   behance.src = "images/SVG/behance.svg";
 });
-
-let githubProjects = document.querySelector(".github-project");
 
 githubProjects.addEventListener("mouseenter", function () {
   githubProjects.src = "images/SVG/github-ver.svg";
@@ -221,8 +222,6 @@ githubProjects.addEventListener("mouseleave", function () {
 });
 
 //mudar cor dos icons dos projetos
-let filipasTown = document.querySelector(".filipasTown");
-
 filipasTown.addEventListener("mouseenter", function () {
   filipasTown.src = "images/SVG/filipastown-ver.svg";
 });
@@ -230,8 +229,6 @@ filipasTown.addEventListener("mouseenter", function () {
 filipasTown.addEventListener("mouseleave", function () {
   filipasTown.src = "images/SVG/filipastown.svg";
 });
-
-let illustration = document.querySelector(".illustration");
 
 illustration.addEventListener("mouseenter", function () {
   illustration.src = "images/SVG/illustrations-ver.svg";
@@ -242,8 +239,6 @@ illustration.addEventListener("mouseleave", function () {
 });
 
 //mudar cor do botão download cv
-let downloadCv = document.querySelector(".img-download");
-
 downloadCv.addEventListener("mouseenter", function () {
   downloadCv.src = "images/SVG/downloadcv-ver.svg";
 });
@@ -253,8 +248,6 @@ downloadCv.addEventListener("mouseleave", function () {
 });
 
 //mudar cor do botão let's chat!
-let letsChat = document.querySelectorAll(".img-chat");
-
 letsChat.forEach(function (chat) {
   chat.addEventListener("mouseover", function () {
     chat.src = "images/SVG/chat-ver.svg";
@@ -269,8 +262,6 @@ letsChat.forEach(function (chat) {
 document.getElementById("year").textContent = new Date().getFullYear();
 
 //mudar cor texto figma protótipo
-let figmaTextDes = document.querySelector(".link-text-figma-des");
-
 figmaTextDes.addEventListener("mouseenter", function () {
   figmaTextDes.src = "images/SVG/figma-proto-des-ver.svg";
 });
@@ -278,8 +269,6 @@ figmaTextDes.addEventListener("mouseenter", function () {
 figmaTextDes.addEventListener("mouseleave", function () {
   figmaTextDes.src = "images/SVG/figma-proto-des.svg";
 });
-
-let figmaTextMob = document.querySelector(".link-text-figma-mob");
 
 figmaTextMob.addEventListener("mouseenter", function () {
   figmaTextMob.src = "images/SVG/figma-proto-mob-ver.svg";
@@ -289,30 +278,29 @@ figmaTextMob.addEventListener("mouseleave", function () {
   figmaTextMob.src = "images/SVG/figma-proto-mob.svg";
 });
 
-//mudar url botão fechar modal
+// widget de acessibilidade
 
-// let closeBtnModal = document.querySelectorAll(".btn-close");
-// closeBtnModal.style.setProperty(
-//   "--bs-btn-close-bg",
-//   "url('images/SVG/close.svg')"
-// );
+accessibilityBtn.addEventListener("mouseenter", function () {
+  accessibilityBtn.src = "images/accessibility-ver.png";
+});
 
-// Widget de acessibilidade
+accessibilityBtn.addEventListener("mouseleave", function () {
+  accessibilityBtn.src = "images/accessibility.png";
+});
 
-// Função para alternar a visibilidade do menu de acessibilidade
+// alternar a visibilidade do menu de acessibilidade
 function toggleAccessibilityMenu() {
   const menu = document.getElementById("accessibility-menu");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-// Variáveis para armazenar o estado de cada modo de acessibilidade
+// armazenar o estado de cada modo de acessibilidade
 let isDeuteranopia = false;
 let isProtanopia = false;
 let isTritanopia = false;
-let isHighContrast = false;
-let isLargeFont = false;
+let isMonochrome = false;
 
-// Funções para alternar os modos de daltonismo
+// alternar os modos de daltonismo
 function toggleDeuteranopia() {
   resetFilters();
   isDeuteranopia = !isDeuteranopia;
@@ -331,50 +319,25 @@ function toggleTritanopia() {
   document.body.classList.toggle("tritanopia", isTritanopia);
 }
 
-// Função para alternar alto contraste
-function toggleContrast() {
-  isHighContrast = !isHighContrast;
-  document.body.classList.toggle("high-contrast", isHighContrast);
+function toggleMonochrome() {
+  isMonochrome = !isMonochrome;
+  document.body.classList.toggle("monochrome", isMonochrome);
 }
 
-// Funções para aumentar e diminuir o tamanho do texto
-function increaseFontSize() {
-  if (!isLargeFont) {
-    document.body.classList.add("large-font");
-    document.body.classList.remove("small-font");
-    isLargeFont = true;
-  }
-}
-
-function decreaseFontSize() {
-  if (isLargeFont) {
-    document.body.classList.remove("large-font");
-    document.body.classList.add("small-font");
-    isLargeFont = false;
-  }
-}
-
-// Função para limpar todos os modos de daltonismo antes de ativar um novo
+// limpar todos os modos de daltonismo antes de ativar um novo
 function resetFilters() {
   document.body.classList.remove("deuteranopia", "protanopia", "tritanopia");
-  isDeuteranopia = isProtanopia = isTritanopia = false;
+  isDeuteranopia = isProtanopia = isTritanopia = isMonochrome = false;
 }
 
-// Função para sair do modo de acessibilidade e restaurar o estado inicial
+// sair do modo de acessibilidade e restaurar o estado inicial
 function resetAccessibility() {
   document.body.classList.remove(
     "deuteranopia",
     "protanopia",
     "tritanopia",
-    "high-contrast",
-    "large-font",
-    "small-font"
+    "monochrome"
   );
-  isDeuteranopia =
-    isProtanopia =
-    isTritanopia =
-    isHighContrast =
-    isLargeFont =
-      false;
+  isDeuteranopia = isProtanopia = isTritanopia = isHighContrast = false;
   document.getElementById("accessibility-menu").style.display = "none";
 }
