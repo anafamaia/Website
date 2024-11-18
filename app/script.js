@@ -46,23 +46,22 @@ if (window.innerWidth <= 992) {
   idCurious.coords = "433,4804,1104,4804,1104,4446,939,4051,557,4051,433,4446";
 }
 
-//animação loading
-// window.addEventListener("load", function () {
-//   initIntroStars(); // Inicializa as estrelas na animação do GIF
+// animação loading
+// document.addEventListener("DOMContentLoaded", () => {
+//   const preloader = document.getElementById("preloader");
+//   const conteudo = document.getElementById("conteudo");
 
-//   setTimeout(function () {
-//     const loading = document.getElementsByClassName("loading");
-//     const animation = document.getElementsByClassName("animation");
+//   // Oculta o preloader após 4 segundos
+//   setTimeout(() => {
+//     preloader.style.transition = "opacity 1s";
+//     preloader.style.opacity = 0;
 
-//     // Diminui o tamanho do GIF e aplica fade-out
-//     animation.style.transform = "scale(0.5)";
-//     animation.style.opacity = "0";
-
-//     // Aguarda a transição do GIF antes de ocultar o container
-//     setTimeout(function () {
-//       loading.classList.add("hidden");
-//     }, 2000); // 2000ms = 2 segundos para corresponder ao tempo de transição
-//   }, 4000); // 4000ms = 4 segundos para exibir o GIF inicialmente
+//     // Aguarda a transição e remove o preloader
+//     setTimeout(() => {
+//       preloader.style.display = "none";
+//       conteudo.style.display = "block";
+//     }, 1000);
+//   }, 1500);
 // });
 
 //modal About Me
