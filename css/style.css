@@ -33,12 +33,8 @@ body {
     display: block;
   }
   .modal-body {
-    display: grid;
+    display: flex;
     justify-content: center;
-  }
-  .illu-modal-body {
-    display: grid;
-    justify-content: start;
   }
 }
 
@@ -200,11 +196,17 @@ p {
 }
 
 .filipasTown {
-  max-width: 300px;
+  max-width: 275px;
+}
+.filipasTown-header {
+  max-width: 215px;
 }
 
 .illustration {
-  max-width: 350px;
+  max-width: 325px;
+}
+.illustration-header {
+  max-width: 250px;
 }
 
 /*modal Filipa's Town*/
@@ -500,6 +502,19 @@ body.monochrome {
   .illustration-logo {
     width: 150px;
   }
+  .filipasTown {
+    max-width: 225px;
+  }
+
+  .filipasTown-header {
+    max-width: 200px;
+  }
+  .illustration {
+    max-width: 250px;
+  }
+  .illustration-header {
+    max-width: 225px;
+  }
 }
 
 /*media query para telemóveis*/
@@ -577,10 +592,17 @@ body.monochrome {
     width: 30px;
   }
   .filipasTown {
-    max-width: 225px;
+    max-width: 220px;
+  }
+
+  .filipasTown-header {
+    max-width: 175px;
   }
   .illustration {
-    max-width: 250px;
+    max-width: 245px;
+  }
+  .illustration-header {
+    max-width: 200px;
   }
   .h3-projects,
   .h4-projects,

@@ -230,11 +230,11 @@ filipasTown.addEventListener("mouseleave", function () {
 });
 
 illustration.addEventListener("mouseenter", function () {
-  illustration.src = "images/SVG/illustrations-ver.svg";
+  illustration.src = "images/SVG/illustration-ver.svg";
 });
 
 illustration.addEventListener("mouseleave", function () {
-  illustration.src = "images/SVG/illustrations.svg";
+  illustration.src = "images/SVG/illustration.svg";
 });
 
 //mudar cor do botão download cv
