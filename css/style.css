@@ -265,14 +265,17 @@ p {
   display: inline;
 }
 
-.icon-ai,
-.icon-ae {
-  width: 25px;
+.icon-ai {
   vertical-align: middle;
 }
 
 .icon-ai {
   margin-left: 10px;
+  width: 25px;
+}
+
+.icon-ae {
+  width: 20px;
 }
 
 .illustration-logo {
@@ -503,14 +506,14 @@ body.monochrome {
     width: 150px;
   }
   .filipasTown {
-    max-width: 225px;
+    max-width: 250px;
   }
 
   .filipasTown-header {
     max-width: 200px;
   }
   .illustration {
-    max-width: 250px;
+    max-width: 275px;
   }
   .illustration-header {
     max-width: 225px;
