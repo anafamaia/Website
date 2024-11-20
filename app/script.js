@@ -242,6 +242,49 @@ downloadCv.addEventListener("mouseleave", function () {
   downloadCv.src = "images/SVG/downloadcv.svg";
 });
 
+//mudar cor do botão fechar modal
+closeBtnAbout.addEventListener("mouseenter", function () {
+  closeBtnAbout.style.backgroundImage = "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnAbout.addEventListener("mouseleave", function () {
+  closeBtnAbout.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
+closeBtnProjects.addEventListener("mouseenter", function () {
+  closeBtnProjects.style.backgroundImage = "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnProjects.addEventListener("mouseleave", function () {
+  closeBtnProjects.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
+closeBtnCurious.addEventListener("mouseenter", function () {
+  closeBtnCurious.style.backgroundImage = "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnCurious.addEventListener("mouseleave", function () {
+  closeBtnCurious.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
+closeBtnFilipasTown.addEventListener("mouseenter", function () {
+  closeBtnFilipasTown.style.backgroundImage =
+    "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnFilipasTown.addEventListener("mouseleave", function () {
+  closeBtnFilipasTown.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
+closeBtnIllustration.addEventListener("mouseenter", function () {
+  closeBtnIllustration.style.backgroundImage =
+    "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnIllustration.addEventListener("mouseleave", function () {
+  closeBtnIllustration.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
 //mudar cor do botão let's chat!
 letsChat.forEach(function (chat) {
   chat.addEventListener("mouseover", function () {
