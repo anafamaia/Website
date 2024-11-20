@@ -36,6 +36,7 @@ let letsChat = document.querySelectorAll(".img-chat");
 let figmaTextDes = document.querySelector(".link-text-figma-des");
 let figmaTextMob = document.querySelector(".link-text-figma-mob");
 let accessibilityBtn = document.querySelector(".widget");
+let preloader = document.getElementById("preloader");
 
 //imagemap funcional em mobile
 if (window.innerWidth <= 992) {
@@ -44,25 +45,20 @@ if (window.innerWidth <= 992) {
   idProjects.coords =
     "1905,3245,2627,3245,2627,2888,2497,2769,2497,2622,2111,2622,1905,2898";
   idCurious.coords = "433,4804,1104,4804,1104,4446,939,4051,557,4051,433,4446";
+  preloader.src = "images/loading-mobile.gif";
 }
 
 // animação loading
-// document.addEventListener("DOMContentLoaded", () => {
-//   const preloader = document.getElementById("preloader");
-//   const conteudo = document.getElementById("conteudo");
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    preloader.style.transition = "opacity 1s";
+    preloader.style.opacity = 0;
 
-//   // Oculta o preloader após 4 segundos
-//   setTimeout(() => {
-//     preloader.style.transition = "opacity 1s";
-//     preloader.style.opacity = 0;
-
-//     // Aguarda a transição e remove o preloader
-//     setTimeout(() => {
-//       preloader.style.display = "none";
-//       conteudo.style.display = "block";
-//     }, 1000);
-//   }, 1500);
-// });
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 1000);
+  }, 1200);
+});
 
 //modal About Me
 function openModalAbout() {

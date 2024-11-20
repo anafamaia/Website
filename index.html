@@ -29,12 +29,13 @@
   </head>
   <body>
     <main>
-      <!-- <div id="preloader">
-        <video autoplay muted playsinline id="preloader-video">
-          <source src="images/loading.mp4" type="video/mp4" />
-          Seu navegador não suporta vídeos.
-        </video>
-      </div> -->
+      <div id="preloader">
+        <img
+          src="images/loading-web.gif"
+          alt="Loading animation"
+          id="preloader-gif"
+        />
+      </div>
 
       <div class="container-fluid text-center logotipo">
         <div class="row justify-content-center">
@@ -496,7 +497,7 @@
                   <div class="col">
                     <div>
                       <h4 class="illustrations-titles">
-                        Logo for the Filipa's Town Project
+                        Logo for the Filipa's Town project
                       </h4>
                       <img
                         src="images/SVG/ai.svg"
@@ -515,7 +516,7 @@
                   <div class="col">
                     <div>
                       <h4 class="illustrations-titles">
-                        Desktop Background for the Filipa's Town Project
+                        Desktop Background for the Filipa's Town project
                       </h4>
                       <img
                         src="images/SVG/ai.svg"
@@ -533,7 +534,7 @@
                 <div class="row mb-5">
                   <div class="col">
                     <h4 class="illustrations-titles">
-                      Mobile Background for the Filipa's Town Project
+                      Mobile Background for the Filipa's Town project
                       <img
                         src="images/SVG/ai.svg"
                         alt="Adobe Illustrator icon"
@@ -550,7 +551,7 @@
                 <div class="row mb-5">
                   <div class="col">
                     <h4 class="illustrations-titles">
-                      Icons for the Filipa's Town Project
+                      Icons for the Filipa's Town project
                       <img
                         src="images/SVG/ai.svg"
                         alt="Adobe Illustrator icon"
@@ -614,7 +615,7 @@
                 <div class="row">
                   <div class="col">
                     <h4 class="illustrations-titles">
-                      Loading animation for the Filipa's Town Project
+                      Loading animation for the Filipa's Town project
                       <img
                         src="images/SVG/ai.svg"
                         alt="Adobe Illustrator icon"
@@ -626,11 +627,51 @@
                         class="icon-ae"
                       />
                     </h4>
-                    <img
-                      src="images/SVG/loading.svg"
-                      alt="Swimming illustration"
-                      class="illustration-swim mt-4"
-                    />
+                    <div
+                      id="carouselExampleFade"
+                      class="carousel slide carousel-dark mt-4"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            src="images/SVG/loading.svg"
+                            class="d-block mx-auto illustration-swim"
+                            alt="Swimming illustration"
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="images/loading-web.gif"
+                            class="d-block mx-auto swim-animation"
+                            alt="Loading animation"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
