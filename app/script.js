@@ -111,7 +111,7 @@ modalCurious.addEventListener("click", function (event) {
 
 closeBtnCurious.addEventListener("click", closeModalCurious);
 
-//Pop-ups About me, Projects e Curious
+//pop-ups About me, Projects e Curious
 
 if (window.innerWidth > 992) {
   idAboutMe.addEventListener("mouseenter", function () {
