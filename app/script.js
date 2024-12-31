@@ -358,6 +358,7 @@ function toggleTritanopia() {
 }
 
 function toggleMonochrome() {
+  resetFilters();
   isMonochrome = !isMonochrome;
   document.body.classList.toggle("monochrome", isMonochrome);
 }
