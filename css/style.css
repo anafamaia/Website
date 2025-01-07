@@ -599,6 +599,12 @@ body.monochrome {
   .illustration-header {
     max-width: 200px;
   }
+  .vodafone {
+    max-width: 245px;
+  }
+  .vodafone-header {
+    max-width: 200px;
+  }
   .h3-projects,
   .h4-projects,
   .icon-ai {

@@ -25,12 +25,19 @@ let modalIllustration = document.querySelector("#modal-illustration");
 let closeBtnIllustration = document.querySelector(
   "#modal-illustration .btn-close"
 );
+let modalVodafone = document.querySelector("#modal-vodafone");
+let closeBtnVodafone = document.querySelector(
+  "#modal-vodafone .btn-close"
+);
+let modal = document.querySelector("#modal");
+let closeBtn = document.querySelector("#modal .btn-close");
 let linkedin = document.querySelector(".linkedin");
 let github = document.querySelector(".github");
 let behance = document.querySelector(".behance");
 let githubProjects = document.querySelector(".github-project");
 let filipasTown = document.querySelector(".filipasTown");
 let illustration = document.querySelector(".illustration");
+let vodafone = document.querySelector(".vodafone");
 let downloadCv = document.querySelector(".img-download");
 let letsChat = document.querySelectorAll(".img-chat");
 let figmaTextDes = document.querySelector(".link-text-figma-des");
@@ -175,6 +182,24 @@ modalIllustration.addEventListener("click", function (event) {
 
 closeBtnIllustration.addEventListener("click", closeModalIllustration);
 
+// Model for Vodafone project
+function openModalVodafone() {
+  document.getElementById("modal-vodafone").style.display = "flex";
+}
+
+function closeModalVodafone() {
+  document.getElementById("modal-vodafone").style.display = "none";
+  document.getElementById("modal-projects").style.display = "flex";
+}
+
+modalVodafone.addEventListener("click", function (event) {
+  if (event.target === modalVodafone) {
+    closeModalVodafone();
+  }
+});
+
+closeBtnVodafone.addEventListener("click", closeModalVodafone);
+
 //mudar cor dos icons das redes sociais
 linkedin.addEventListener("mouseenter", function () {
   linkedin.src = "images/SVG/linkedin-ver.svg";
@@ -232,6 +257,16 @@ illustration.addEventListener("mouseenter", function () {
 illustration.addEventListener("mouseleave", function () {
   illustration.src = "images/SVG/illustration.svg";
 });
+
+// TODO: Change this to the red version so that it aligns with everything else
+vodafone.addEventListener("mouseenter", function () {
+  vodafone.src = "images/SVG/vodafone.svg";
+});
+
+vodafone.addEventListener("mouseleave", function () {
+  vodafone.src = "images/SVG/vodafone.svg";
+});
+
 
 //mudar cor do botão download cv
 downloadCv.addEventListener("mouseenter", function () {
