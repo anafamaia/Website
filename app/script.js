@@ -25,21 +25,27 @@ let modalIllustration = document.querySelector("#modal-illustration");
 let closeBtnIllustration = document.querySelector(
   "#modal-illustration .btn-close"
 );
+let modalVodafone = document.querySelector("#modal-vodafone");
+let closeBtnVodafone = document.querySelector("#modal-vodafone .btn-close");
+let modal = document.querySelector("#modal");
+let closeBtn = document.querySelector("#modal .btn-close");
 let linkedin = document.querySelector(".linkedin");
 let github = document.querySelector(".github");
 let behance = document.querySelector(".behance");
 let githubProjects = document.querySelector(".github-project");
 let filipasTown = document.querySelector(".filipasTown");
 let illustration = document.querySelector(".illustration");
+let vodafone = document.querySelector(".vodafone");
 let downloadCv = document.querySelector(".img-download");
 let letsChat = document.querySelectorAll(".img-chat");
 let figmaTextDes = document.querySelector(".link-text-figma-des");
 let figmaTextMob = document.querySelector(".link-text-figma-mob");
 let accessibilityBtn = document.querySelector(".widget");
 let preloader = document.getElementById("preloader");
+let figmaProtoVodafone = document.querySelector(".link-figma-proto");
 
 //imagemap funcional em mobile
-if (window.innerWidth <= 992) {
+if (window.innerWidth <= 1100) {
   desktop.name = "imagemap-mobile";
   idAboutMe.coords = "411,1843,1104,1840,1104,1342,1017,1129,433,1129,411,1153";
   idProjects.coords =
@@ -175,6 +181,24 @@ modalIllustration.addEventListener("click", function (event) {
 
 closeBtnIllustration.addEventListener("click", closeModalIllustration);
 
+// Model for Vodafone project
+function openModalVodafone() {
+  document.getElementById("modal-vodafone").style.display = "flex";
+}
+
+function closeModalVodafone() {
+  document.getElementById("modal-vodafone").style.display = "none";
+  document.getElementById("modal-projects").style.display = "flex";
+}
+
+modalVodafone.addEventListener("click", function (event) {
+  if (event.target === modalVodafone) {
+    closeModalVodafone();
+  }
+});
+
+closeBtnVodafone.addEventListener("click", closeModalVodafone);
+
 //mudar cor dos icons das redes sociais
 linkedin.addEventListener("mouseenter", function () {
   linkedin.src = "images/SVG/linkedin-ver.svg";
@@ -233,6 +257,24 @@ illustration.addEventListener("mouseleave", function () {
   illustration.src = "images/SVG/illustration.svg";
 });
 
+vodafone.addEventListener("mouseenter", function () {
+  vodafone.src = "images/SVG/vodafone-ver.svg";
+});
+
+vodafone.addEventListener("mouseleave", function () {
+  vodafone.src = "images/SVG/vodafone.svg";
+});
+
+//mudar cor botão Figma Prototype
+
+figmaProtoVodafone.addEventListener("mouseenter", function () {
+  figmaProtoVodafone.src = "images/SVG/prototype-ver.svg";
+});
+
+figmaProtoVodafone.addEventListener("mouseleave", function () {
+  figmaProtoVodafone.src = "images/SVG/prototype.svg";
+});
+
 //mudar cor do botão download cv
 downloadCv.addEventListener("mouseenter", function () {
   downloadCv.src = "images/SVG/downloadcv-ver.svg";
@@ -283,6 +325,14 @@ closeBtnIllustration.addEventListener("mouseenter", function () {
 
 closeBtnIllustration.addEventListener("mouseleave", function () {
   closeBtnIllustration.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
+closeBtnVodafone.addEventListener("mouseenter", function () {
+  closeBtnVodafone.style.backgroundImage = "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnVodafone.addEventListener("mouseleave", function () {
+  closeBtnVodafone.style.backgroundImage = "url('../images/SVG/close.svg')";
 });
 
 //mudar cor do botão let's chat!
