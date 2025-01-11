@@ -26,9 +26,7 @@ let closeBtnIllustration = document.querySelector(
   "#modal-illustration .btn-close"
 );
 let modalVodafone = document.querySelector("#modal-vodafone");
-let closeBtnVodafone = document.querySelector(
-  "#modal-vodafone .btn-close"
-);
+let closeBtnVodafone = document.querySelector("#modal-vodafone .btn-close");
 let modal = document.querySelector("#modal");
 let closeBtn = document.querySelector("#modal .btn-close");
 let linkedin = document.querySelector(".linkedin");
@@ -44,9 +42,10 @@ let figmaTextDes = document.querySelector(".link-text-figma-des");
 let figmaTextMob = document.querySelector(".link-text-figma-mob");
 let accessibilityBtn = document.querySelector(".widget");
 let preloader = document.getElementById("preloader");
+let figmaProtoVodafone = document.querySelector(".link-figma-proto");
 
 //imagemap funcional em mobile
-if (window.innerWidth <= 992) {
+if (window.innerWidth <= 1100) {
   desktop.name = "imagemap-mobile";
   idAboutMe.coords = "411,1843,1104,1840,1104,1342,1017,1129,433,1129,411,1153";
   idProjects.coords =
@@ -258,15 +257,23 @@ illustration.addEventListener("mouseleave", function () {
   illustration.src = "images/SVG/illustration.svg";
 });
 
-// TODO: Change this to the red version so that it aligns with everything else
 vodafone.addEventListener("mouseenter", function () {
-  vodafone.src = "images/SVG/vodafone.svg";
+  vodafone.src = "images/SVG/vodafone-ver.svg";
 });
 
 vodafone.addEventListener("mouseleave", function () {
   vodafone.src = "images/SVG/vodafone.svg";
 });
 
+//mudar cor botão Figma Prototype
+
+figmaProtoVodafone.addEventListener("mouseenter", function () {
+  figmaProtoVodafone.src = "images/SVG/prototype-ver.svg";
+});
+
+figmaProtoVodafone.addEventListener("mouseleave", function () {
+  figmaProtoVodafone.src = "images/SVG/prototype.svg";
+});
 
 //mudar cor do botão download cv
 downloadCv.addEventListener("mouseenter", function () {
@@ -318,6 +325,14 @@ closeBtnIllustration.addEventListener("mouseenter", function () {
 
 closeBtnIllustration.addEventListener("mouseleave", function () {
   closeBtnIllustration.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
+closeBtnVodafone.addEventListener("mouseenter", function () {
+  closeBtnVodafone.style.backgroundImage = "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnVodafone.addEventListener("mouseleave", function () {
+  closeBtnVodafone.style.backgroundImage = "url('../images/SVG/close.svg')";
 });
 
 //mudar cor do botão let's chat!
