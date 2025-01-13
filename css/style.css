@@ -325,8 +325,14 @@ p {
 }
 
 .link-figma-proto {
-  width: 125px;
-  display: block;
+}
+
+.link-figma-proto-img {
+  width: 15px;
+}
+
+.behance-project {
+  width: 22px;
 }
 
 /*modal curious*/
@@ -610,20 +616,20 @@ body.monochrome {
     width: 30px;
   }
   .filipasTown {
-    max-width: 220px;
+    max-width: 190px;
   }
   .filipasTown-header {
     max-width: 175px;
   }
   .illustration {
-    max-width: 245px;
+    max-width: 210px;
   }
   .illustration-header,
   .vodafone-header {
     max-width: 200px;
   }
   .vodafone {
-    max-width: 260px;
+    max-width: 230px;
   }
   .h3-projects,
   .h4-projects,

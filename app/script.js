@@ -42,7 +42,8 @@ let figmaTextDes = document.querySelector(".link-text-figma-des");
 let figmaTextMob = document.querySelector(".link-text-figma-mob");
 let accessibilityBtn = document.querySelector(".widget");
 let preloader = document.getElementById("preloader");
-let figmaProtoVodafone = document.querySelector(".link-figma-proto");
+let figmaProtoVodafone = document.querySelector(".link-figma-proto-img");
+let behanceProject = document.querySelector(".behance-project");
 
 //imagemap funcional em mobile
 if (window.innerWidth <= 1100) {
@@ -265,14 +266,24 @@ vodafone.addEventListener("mouseleave", function () {
   vodafone.src = "images/SVG/vodafone.svg";
 });
 
-//mudar cor botão Figma Prototype
+//mudar cor botão behance (vodafone project))
+
+behanceProject.addEventListener("mouseenter", function () {
+  behanceProject.src = "images/SVG/behance-ver.svg";
+});
+
+behanceProject.addEventListener("mouseleave", function () {
+  behanceProject.src = "images/SVG/behance.svg";
+});
+
+//mudar cor botão Figma (vodafone project))
 
 figmaProtoVodafone.addEventListener("mouseenter", function () {
-  figmaProtoVodafone.src = "images/SVG/prototype-ver.svg";
+  figmaProtoVodafone.src = "images/SVG/figma-ver.svg";
 });
 
 figmaProtoVodafone.addEventListener("mouseleave", function () {
-  figmaProtoVodafone.src = "images/SVG/prototype.svg";
+  figmaProtoVodafone.src = "images/SVG/figma.svg";
 });
 
 //mudar cor do botão download cv
@@ -415,7 +426,12 @@ function toggleMonochrome() {
 
 // limpar todos os modos de daltonismo antes de ativar um novo
 function resetFilters() {
-  document.body.classList.remove("deuteranopia", "protanopia", "tritanopia");
+  document.body.classList.remove(
+    "deuteranopia",
+    "protanopia",
+    "tritanopia",
+    "monochrome"
+  );
   isDeuteranopia = isProtanopia = isTritanopia = isMonochrome = false;
 }
 
