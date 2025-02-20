@@ -142,7 +142,7 @@ p {
 }
 
 .logo-about {
-  width: 240px;
+  width: 185px;
   height: auto;
   display: block;
 }
@@ -154,7 +154,7 @@ p {
 }
 
 .img-title {
-  width: 300px;
+  width: 275px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -162,7 +162,7 @@ p {
 .linkedin,
 .github,
 .behance {
-  width: 50px;
+  width: 45px;
 }
 
 .icons-skills {
@@ -481,7 +481,7 @@ body.monochrome {
     text-align: center;
   }
   .logo-about {
-    width: 200px;
+    width: 175px;
     height: auto;
     display: block;
   }

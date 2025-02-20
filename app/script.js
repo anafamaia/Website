@@ -120,7 +120,7 @@ closeBtnCurious.addEventListener("click", closeModalCurious);
 
 //pop-ups About me, Projects e Curious
 
-if (window.innerWidth > 992) {
+if (window.innerWidth > 1100) {
   idAboutMe.addEventListener("mouseenter", function () {
     aboutPop.style.display = "block";
   });
