@@ -37,6 +37,11 @@ body {
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -195,15 +200,19 @@ p {
 }
 
 .filipasTown {
-  max-width: 275px;
+  max-width: 250px;
 }
 
 .illustration {
-  max-width: 325px;
+  max-width: 295px;
 }
 
 .vodafone {
-  max-width: 375px;
+  max-width: 325px;
+}
+
+.founders {
+  max-width: 265px;
 }
 
 /*modal Filipa's Town*/
@@ -234,7 +243,10 @@ p {
   width: 15px;
 }
 
-.ai-18,
+.ai-20 {
+  width: 22px;
+}
+
 .js-20 {
   width: 18px;
 }
@@ -333,6 +345,11 @@ p {
 
 .behance-project {
   width: 22px;
+}
+
+/*modal founders*/
+.founders-header {
+  max-width: 200px;
 }
 
 /*modal curious*/
@@ -523,21 +540,35 @@ body.monochrome {
   .illustration-logo {
     width: 150px;
   }
-  .filipasTown {
-    max-width: 250px;
+  .illustration-img-icon {
+    width: 36px;
   }
-  .filipasTown-header {
+  .illustration-img-icon-45 {
+    width: 34px;
+  }
+  .illustration-img-icon-62 {
+    width: 44px;
+  }
+  .illustration-img-icon-37 {
+    width: 28px;
+  }
+  .filipasTown,
+  .founders {
+    max-width: 230px;
+  }
+  .filipasTown-header,
+  .founders-header {
     max-width: 200px;
   }
   .illustration {
-    max-width: 275px;
+    max-width: 255px;
   }
   .illustration-header,
   .vodafone-header {
     max-width: 225px;
   }
   .vodafone {
-    max-width: 300px;
+    max-width: 280px;
   }
 }
 
@@ -615,18 +646,20 @@ body.monochrome {
   .icons-skills-49 {
     width: 30px;
   }
-  .filipasTown {
+  .filipasTown,
+  .founders {
     max-width: 190px;
   }
-  .filipasTown-header {
-    max-width: 175px;
+  .filipasTown-header,
+  .founders-header {
+    max-width: 165px;
   }
   .illustration {
     max-width: 210px;
   }
   .illustration-header,
   .vodafone-header {
-    max-width: 200px;
+    max-width: 190px;
   }
   .vodafone {
     max-width: 230px;
@@ -688,5 +721,8 @@ body.monochrome {
   .footer-mobile {
     display: flex;
     justify-content: center;
+  }
+  .ai-20 {
+    width: 18px;
   }
 }

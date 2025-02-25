@@ -44,6 +44,9 @@ let accessibilityBtn = document.querySelector(".widget");
 let preloader = document.getElementById("preloader");
 let figmaProtoVodafone = document.querySelector(".link-figma-proto-img");
 let behanceProject = document.querySelector(".behance-project");
+let modalFounders = document.querySelector("#modal-founders");
+let closeBtnFounders = document.querySelector("#modal-founders .btn-close");
+let founders = document.querySelector(".founders");
 
 //imagemap funcional em mobile
 if (window.innerWidth <= 1100) {
@@ -70,10 +73,12 @@ document.addEventListener("DOMContentLoaded", () => {
 //modal About Me
 function openModalAbout() {
   document.getElementById("modal-about").style.display = "flex";
+  document.body.classList.add("no-scroll");
 }
 
 function closeModalAbout() {
   document.getElementById("modal-about").style.display = "none";
+  document.body.classList.remove("no-scroll");
 }
 
 modalAbout.addEventListener("click", function (event) {
@@ -87,10 +92,12 @@ closeBtnAbout.addEventListener("click", closeModalAbout);
 //modal Projects
 function openModalProjects() {
   document.getElementById("modal-projects").style.display = "flex";
+  document.body.classList.add("no-scroll");
 }
 
 function closeModalProjects() {
   document.getElementById("modal-projects").style.display = "none";
+  document.body.classList.remove("no-scroll");
 }
 
 modalProjects.addEventListener("click", function (event) {
@@ -104,10 +111,12 @@ closeBtnProjects.addEventListener("click", closeModalProjects);
 //modal Curious
 function openModalCurious() {
   document.getElementById("modal-curious").style.display = "flex";
+  document.body.classList.add("no-scroll");
 }
 
 function closeModalCurious() {
   document.getElementById("modal-curious").style.display = "none";
+  document.body.classList.remove("no-scroll");
 }
 
 modalCurious.addEventListener("click", function (event) {
@@ -149,6 +158,7 @@ if (window.innerWidth > 1100) {
 //modal Filipa's Town
 function openModalFilipasTown() {
   document.getElementById("modal-filipas-town").style.display = "flex";
+  document.body.classList.add("no-scroll");
 }
 
 function closeModalFilipasTown() {
@@ -167,6 +177,7 @@ closeBtnFilipasTown.addEventListener("click", closeModalFilipasTown);
 //modal Illustration
 function openModalIllustration() {
   document.getElementById("modal-illustration").style.display = "flex";
+  document.body.classList.add("no-scroll");
 }
 
 function closeModalIllustration() {
@@ -182,9 +193,10 @@ modalIllustration.addEventListener("click", function (event) {
 
 closeBtnIllustration.addEventListener("click", closeModalIllustration);
 
-// Model for Vodafone project
+//modal Vodafone project
 function openModalVodafone() {
   document.getElementById("modal-vodafone").style.display = "flex";
+  document.body.classList.add("no-scroll");
 }
 
 function closeModalVodafone() {
@@ -199,6 +211,25 @@ modalVodafone.addEventListener("click", function (event) {
 });
 
 closeBtnVodafone.addEventListener("click", closeModalVodafone);
+
+//modal Founders project
+function openModalFounders() {
+  document.getElementById("modal-founders").style.display = "flex";
+  document.body.classList.add("no-scroll");
+}
+
+function closeModalFounders() {
+  document.getElementById("modal-founders").style.display = "none";
+  document.getElementById("modal-projects").style.display = "flex";
+}
+
+modalFounders.addEventListener("click", function (event) {
+  if (event.target === modalFounders) {
+    closeModalFounders();
+  }
+});
+
+closeBtnFounders.addEventListener("click", closeModalFounders);
 
 //mudar cor dos icons das redes sociais
 linkedin.addEventListener("mouseenter", function () {
@@ -264,6 +295,14 @@ vodafone.addEventListener("mouseenter", function () {
 
 vodafone.addEventListener("mouseleave", function () {
   vodafone.src = "images/SVG/vodafone.svg";
+});
+
+founders.addEventListener("mouseenter", function () {
+  founders.src = "images/SVG/f2-ver.svg";
+});
+
+founders.addEventListener("mouseleave", function () {
+  founders.src = "images/SVG/f2.svg";
 });
 
 //mudar cor botão behance (vodafone project))
@@ -344,6 +383,14 @@ closeBtnVodafone.addEventListener("mouseenter", function () {
 
 closeBtnVodafone.addEventListener("mouseleave", function () {
   closeBtnVodafone.style.backgroundImage = "url('../images/SVG/close.svg')";
+});
+
+closeBtnFounders.addEventListener("mouseenter", function () {
+  closeBtnFounders.style.backgroundImage = "url('../images/SVG/close-ver.svg')";
+});
+
+closeBtnFounders.addEventListener("mouseleave", function () {
+  closeBtnFounders.style.backgroundImage = "url('../images/SVG/close.svg')";
 });
 
 //mudar cor do botão let's chat!
