@@ -21,10 +21,6 @@ let modalFilipasTown = document.querySelector("#modal-filipas-town");
 let closeBtnFilipasTown = document.querySelector(
   "#modal-filipas-town .btn-close"
 );
-let modalIllustration = document.querySelector("#modal-illustration");
-let closeBtnIllustration = document.querySelector(
-  "#modal-illustration .btn-close"
-);
 let modalVodafone = document.querySelector("#modal-vodafone");
 let closeBtnVodafone = document.querySelector("#modal-vodafone .btn-close");
 let modal = document.querySelector("#modal");
@@ -34,12 +30,9 @@ let github = document.querySelector(".github");
 let behance = document.querySelector(".behance");
 let githubProjects = document.querySelector(".github-project");
 let filipasTown = document.querySelector(".filipasTown");
-let illustration = document.querySelector(".illustration");
 let vodafone = document.querySelector(".vodafone");
 let downloadCv = document.querySelector(".img-download");
 let letsChat = document.querySelectorAll(".img-chat");
-let figmaTextDes = document.querySelector(".link-text-figma-des");
-let figmaTextMob = document.querySelector(".link-text-figma-mob");
 let accessibilityBtn = document.querySelector(".widget");
 let preloader = document.getElementById("preloader");
 let figmaProtoVodafone = document.querySelector(".link-figma-proto-img");
@@ -174,25 +167,6 @@ modalFilipasTown.addEventListener("click", function (event) {
 
 closeBtnFilipasTown.addEventListener("click", closeModalFilipasTown);
 
-//modal Illustration
-function openModalIllustration() {
-  document.getElementById("modal-illustration").style.display = "flex";
-  document.body.classList.add("no-scroll");
-}
-
-function closeModalIllustration() {
-  document.getElementById("modal-illustration").style.display = "none";
-  document.getElementById("modal-projects").style.display = "flex";
-}
-
-modalIllustration.addEventListener("click", function (event) {
-  if (event.target === modalIllustration) {
-    closeModalIllustration();
-  }
-});
-
-closeBtnIllustration.addEventListener("click", closeModalIllustration);
-
 //modal Vodafone project
 function openModalVodafone() {
   document.getElementById("modal-vodafone").style.display = "flex";
@@ -240,13 +214,13 @@ linkedin.addEventListener("mouseleave", function () {
   linkedin.src = "images/SVG/linkedin.svg";
 });
 
-linkedin.addEventListener("touchstart", function () {
-  linkedin.src = "images/SVG/linkedin-ver.svg";
-});
+// linkedin.addEventListener("touchstart", function () {
+//   linkedin.src = "images/SVG/linkedin-ver.svg";
+// });
 
-linkedin.addEventListener("touchend", function () {
-  linkedin.src = "images/SVG/linkedin.svg";
-});
+// linkedin.addEventListener("touchend", function () {
+//   linkedin.src = "images/SVG/linkedin.svg";
+// });
 
 github.addEventListener("mouseenter", function () {
   github.src = "images/SVG/github-ver.svg";
@@ -264,14 +238,6 @@ behance.addEventListener("mouseleave", function () {
   behance.src = "images/SVG/behance.svg";
 });
 
-githubProjects.addEventListener("mouseenter", function () {
-  githubProjects.src = "images/SVG/github-ver.svg";
-});
-
-githubProjects.addEventListener("mouseleave", function () {
-  githubProjects.src = "images/SVG/github.svg";
-});
-
 //mudar cor dos icons dos projetos
 filipasTown.addEventListener("mouseenter", function () {
   filipasTown.src = "images/SVG/filipastown-ver.svg";
@@ -279,14 +245,6 @@ filipasTown.addEventListener("mouseenter", function () {
 
 filipasTown.addEventListener("mouseleave", function () {
   filipasTown.src = "images/SVG/filipastown.svg";
-});
-
-illustration.addEventListener("mouseenter", function () {
-  illustration.src = "images/SVG/illustration-ver.svg";
-});
-
-illustration.addEventListener("mouseleave", function () {
-  illustration.src = "images/SVG/illustration.svg";
 });
 
 vodafone.addEventListener("mouseenter", function () {
@@ -368,15 +326,6 @@ closeBtnFilipasTown.addEventListener("mouseleave", function () {
   closeBtnFilipasTown.style.backgroundImage = "url('../images/SVG/close.svg')";
 });
 
-closeBtnIllustration.addEventListener("mouseenter", function () {
-  closeBtnIllustration.style.backgroundImage =
-    "url('../images/SVG/close-ver.svg')";
-});
-
-closeBtnIllustration.addEventListener("mouseleave", function () {
-  closeBtnIllustration.style.backgroundImage = "url('../images/SVG/close.svg')";
-});
-
 closeBtnVodafone.addEventListener("mouseenter", function () {
   closeBtnVodafone.style.backgroundImage = "url('../images/SVG/close-ver.svg')";
 });
@@ -407,25 +356,7 @@ letsChat.forEach(function (chat) {
 //atualizar data no footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-//mudar cor texto figma protótipo
-figmaTextDes.addEventListener("mouseenter", function () {
-  figmaTextDes.src = "images/SVG/figma-proto-des-ver.svg";
-});
-
-figmaTextDes.addEventListener("mouseleave", function () {
-  figmaTextDes.src = "images/SVG/figma-proto-des.svg";
-});
-
-figmaTextMob.addEventListener("mouseenter", function () {
-  figmaTextMob.src = "images/SVG/figma-proto-mob-ver.svg";
-});
-
-figmaTextMob.addEventListener("mouseleave", function () {
-  figmaTextMob.src = "images/SVG/figma-proto-mob.svg";
-});
-
 // widget de acessibilidade
-
 accessibilityBtn.addEventListener("mouseenter", function () {
   accessibilityBtn.src = "images/accessibility-ver.png";
 });
