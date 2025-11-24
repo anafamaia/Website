@@ -214,14 +214,6 @@ linkedin.addEventListener("mouseleave", function () {
   linkedin.src = "images/SVG/linkedin.svg";
 });
 
-// linkedin.addEventListener("touchstart", function () {
-//   linkedin.src = "images/SVG/linkedin-ver.svg";
-// });
-
-// linkedin.addEventListener("touchend", function () {
-//   linkedin.src = "images/SVG/linkedin.svg";
-// });
-
 github.addEventListener("mouseenter", function () {
   github.src = "images/SVG/github-ver.svg";
 });
@@ -261,26 +253,6 @@ founders.addEventListener("mouseenter", function () {
 
 founders.addEventListener("mouseleave", function () {
   founders.src = "images/SVG/f2.svg";
-});
-
-//mudar cor botão behance (vodafone project))
-
-behanceProject.addEventListener("mouseenter", function () {
-  behanceProject.src = "images/SVG/behance-ver.svg";
-});
-
-behanceProject.addEventListener("mouseleave", function () {
-  behanceProject.src = "images/SVG/behance.svg";
-});
-
-//mudar cor botão Figma (vodafone project))
-
-figmaProtoVodafone.addEventListener("mouseenter", function () {
-  figmaProtoVodafone.src = "images/SVG/figma-ver.svg";
-});
-
-figmaProtoVodafone.addEventListener("mouseleave", function () {
-  figmaProtoVodafone.src = "images/SVG/figma.svg";
 });
 
 //mudar cor do botão download cv
